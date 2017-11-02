@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="dubbo-consumer" />
         <module name="dubbo-provider" />
+        <module name="interview" />
+        <module name="jdkdemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -15,6 +17,8 @@
       <module name="dubbo-provider" target="1.8" />
       <module name="dubbodemo" target="1.5" />
       <module name="dubboprovider" target="1.5" />
+      <module name="interview" target="1.5" />
+      <module name="jdkdemo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

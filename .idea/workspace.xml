@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da2a285a-f1cc-409e-8838-0a1be0883da7" name="Default" comment="">
+    <list default="true" id="da2a285a-f1cc-409e-8838-0a1be0883da7" name="Default" comment="init">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interview/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interview/src/main/java/Java基础/Accessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interview/src/main/java/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interview/src/main/java/array/BinarySearch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interview/src/main/java/array/InsersionSort.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interview/src/main/java/array/MoveZeroes_283.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interview/src/main/java/array/SortColors_75.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interview/src/main/java/array/_215.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interview/src/main/java/array/_85.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/collection/AssociativeArray.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/collection/HashMapInfiniteLoop.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/AnonymouseInnerClass.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/Class1.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/Final_01.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass_01.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass_02.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass_03.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass_04.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/Interface1.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/Interface2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/Interface3.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/LocalInner.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/MemberInner.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/Sequence.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/StaticInner.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/Static_01.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类/SuperDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/类型信息/C.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/综合/Exception_01.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/综合/Exception_02.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/综合/String_01.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/综合/String_02.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jdkdemo/src/main/java/综合/String_03.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/dubbodemo/target/" />
     <ignored path="$PROJECT_DIR$/dubboprovider/target/" />
     <ignored path="$PROJECT_DIR$/dubbo-consumer/target/" />
     <ignored path="$PROJECT_DIR$/dubbo-provider/target/" />
+    <ignored path="$PROJECT_DIR$/interview/target/" />
+    <ignored path="$PROJECT_DIR$/.idea/target/" />
+    <ignored path="$PROJECT_DIR$/jdkdemo/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,21 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DemoServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo-provider/src/main/java/net/coderdaily/dubbo/service/DemoServiceImpl.java">
+      <file leaf-file-name="Exception_02.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/综合/Exception_02.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="345">
+              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -42,8 +72,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="spring-beans.schema" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -53,6 +83,11 @@
       <find>zoo</find>
       <find>register</find>
       <find>regi</find>
+      <find>dubbo</find>
+      <find>sort</find>
+      <find>transf</find>
+      <find>equals</find>
+      <find>intern</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -67,22 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dubbodemo/pom.xml" />
-        <option value="$PROJECT_DIR$/dubboprovider/src/main/java/net/coderdaily/service/IDemoService.java" />
-        <option value="$PROJECT_DIR$/dubboprovider/src/main/java/net/Application.java" />
-        <option value="$PROJECT_DIR$/dubboprovider/pom.xml" />
-        <option value="$PROJECT_DIR$/dubbo-provider/src/main/java/net/coderdaily/dubboprovider/service/IDemoService.java" />
-        <option value="$PROJECT_DIR$/dubbo-provider/src/main/java/net/coderdaily/dubboprovider/service/DemoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/dubbo-provider/src/main/resources/dubbo.xml" />
-        <option value="$PROJECT_DIR$/dubbo-provider/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/dubbo-consumer/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/dubbo-consumer/src/main/java/net/coderdaily/dubboconsumer/service/service.java" />
-        <option value="$PROJECT_DIR$/dubbo-consumer/src/test/java/net/coderdaily/dubboconsumer/DubboConsumerApplicationTests.java" />
-        <option value="$PROJECT_DIR$/dubbo-consumer/src/main/java/net/coderdaily/dubboconsumer/DubboConsumerApplication.java" />
-        <option value="$PROJECT_DIR$/dubbo-provider/src/main/java/net/coderdaily/dubboprovider/DubboProviderApplication.java" />
-        <option value="$PROJECT_DIR$/dubbo-consumer/src/main/java/net/coderdaily/dubbo/service/IDemoService.java" />
-        <option value="$PROJECT_DIR$/dubbo-consumer/pom.xml" />
-        <option value="$PROJECT_DIR$/dubbo-provider/pom.xml" />
         <option value="$PROJECT_DIR$/dubbo-consumer/src/main/java/net/coderdaily/DubboConsumerApplication.java" />
         <option value="$PROJECT_DIR$/dubbo-provider/src/main/java/net/coderdaily/DubboProviderApplication.java" />
         <option value="$PROJECT_DIR$/dubbo-provider/src/main/resources/provider.xml" />
@@ -90,6 +109,50 @@
         <option value="$PROJECT_DIR$/dubbo-consumer/.gitignore" />
         <option value="$PROJECT_DIR$/dubbo-provider/src/main/java/net/coderdaily/dubbo/service/DemoServiceImpl.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/interview/pom.xml" />
+        <option value="$PROJECT_DIR$/interview/src/main/java/Solution.java" />
+        <option value="$PROJECT_DIR$/interview/src/main/java/array/BinarySearch.java" />
+        <option value="$PROJECT_DIR$/interview/src/main/java/array/Solutin.java" />
+        <option value="$PROJECT_DIR$/interview/src/main/java/array/Solution.java" />
+        <option value="$PROJECT_DIR$/interview/src/main/java/array/moveZeroes_283.java" />
+        <option value="$PROJECT_DIR$/interview/src/main/java/array/SortColors_75.java" />
+        <option value="$PROJECT_DIR$/interview/src/main/java/array/_215.java" />
+        <option value="$PROJECT_DIR$/.idea/pom.xml" />
+        <option value="$PROJECT_DIR$/interview/src/main/java/array/InsersionSort.java" />
+        <option value="$PROJECT_DIR$/interview/src/main/java/Java基础/Accessor.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/collection/AssociativeArray.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/collection/HashMapInfiniteLoop.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/io/B.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/pom.xml" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/collection/Processon.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/collection/HttpQuery.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/collection/p2/B.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/collection/A.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/Father.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/SuperDemo.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/Final_01.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/Static_01.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/Interface1.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/Interface3.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/Interface2.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/Sequence.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/Class1.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/Outer.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass_01.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/LocalInner.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass_02.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/AnonymouseInnerClass.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/StaticInner.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/MemberInner.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass_03.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass_04.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/类型信息/C.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/综合/String_02.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/综合/String_01.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/综合/String_03.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/综合/Exception_01.java" />
+        <option value="$PROJECT_DIR$/jdkdemo/src/main/java/综合/Exception_02.java" />
       </list>
     </option>
   </component>
@@ -156,7 +219,9 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -172,7 +237,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,78 +249,25 @@
             <path>
               <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="jdkdemo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="jdkdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="coderdaily" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="coderdaily" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-provider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="jdkdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="jdkdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -262,37 +275,18 @@
             <path>
               <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="jdkdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="coderdaily" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="coderdaily" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mydemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mydemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="综合" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,13 +295,18 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth0" value="15" />
     <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="15" />
     <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="15" />
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="Object&#9;PSI&#9;JAVA://java.lang.Object&#10;HashMap&#9;PSI&#9;JAVA://java.util.HashMap&#10;Iterator&#9;PSI&#9;JAVA://java.util.Iterator&#10;ConcurrentHash&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap&#10;InputStrea&#9;PSI&#9;JAVA://java.io.InputStream&#10;Array&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/ArrayList.java" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -330,7 +329,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DubboProviderApplication">
+  <component name="RunManager" selected="Application.Exception_02">
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="综合.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="综合.Demo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="jdkdemo" />
+      <envs />
+    </configuration>
     <configuration name="DubboConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="net.coderdaily.DubboConsumerApplication" />
@@ -341,6 +359,82 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="net.coderdaily.DubboProviderApplication" />
       <module name="dubbo-provider" />
+      <envs />
+    </configuration>
+    <configuration name="Exception_02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="综合.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="综合.Exception_02" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="jdkdemo" />
+      <envs />
+    </configuration>
+    <configuration name="String_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="综合.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="综合.String_01" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="jdkdemo" />
+      <envs />
+    </configuration>
+    <configuration name="String_02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="综合.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="综合.String_02" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="jdkdemo" />
+      <envs />
+    </configuration>
+    <configuration name="String_03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="综合.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="综合.String_03" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="jdkdemo" />
       <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -376,13 +470,30 @@
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
     </configuration>
-    <list size="2">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.DubboConsumerApplication" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.DubboProviderApplication" />
+      <item index="2" class="java.lang.String" itemvalue="Application.String_01" />
+      <item index="3" class="java.lang.String" itemvalue="Application.String_02" />
+      <item index="4" class="java.lang.String" itemvalue="Application.String_03" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Demo" />
+      <item index="6" class="java.lang.String" itemvalue="Application.Exception_02" />
     </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Exception_02" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Demo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.String_03" />
+        <item index="3" class="java.lang.String" itemvalue="Application.String_01" />
+        <item index="4" class="java.lang.String" itemvalue="Application.String_02" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -392,7 +503,34 @@
       <option name="presentableId" value="Default" />
       <updated>1503477264114</updated>
       <workItem from="1503477265606" duration="9189000" />
-      <workItem from="1503915632479" duration="5078000" />
+      <workItem from="1503915632479" duration="6606000" />
+      <workItem from="1503988990186" duration="387000" />
+      <workItem from="1503992319308" duration="3146000" />
+      <workItem from="1504233123135" duration="1462000" />
+      <workItem from="1504318722367" duration="12688000" />
+      <workItem from="1504923359162" duration="1792000" />
+      <workItem from="1505025015247" duration="1095000" />
+      <workItem from="1505136692043" duration="2207000" />
+      <workItem from="1505208214429" duration="77000" />
+      <workItem from="1505219568508" duration="3005000" />
+      <workItem from="1506342683076" duration="1325000" />
+      <workItem from="1506399310650" duration="569000" />
+      <workItem from="1507527366074" duration="4915000" />
+      <workItem from="1507553442750" duration="11168000" />
+      <workItem from="1507704466086" duration="707000" />
+      <workItem from="1507734949918" duration="326000" />
+      <workItem from="1507809242524" duration="4661000" />
+      <workItem from="1508074806862" duration="2115000" />
+      <workItem from="1508419476318" duration="2157000" />
+      <workItem from="1508548580457" duration="6624000" />
+      <workItem from="1508669034635" duration="1632000" />
+      <workItem from="1508733509704" duration="65000" />
+      <workItem from="1508853678606" duration="415000" />
+      <workItem from="1508936155075" duration="771000" />
+      <workItem from="1509336314905" duration="7000" />
+      <workItem from="1509363733959" duration="6000" />
+      <workItem from="1509508827259" duration="4704000" />
+      <workItem from="1509591209236" duration="4577000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1503971712804</created>
@@ -405,7 +543,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14267000" />
+    <option name="totallyTimeSpent" value="88398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -413,26 +551,26 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12965617" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26964933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13108882" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26844016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2841596" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3073066" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32163325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3977591" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33010882" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -485,93 +623,54 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jdkdemo/src/main/java/综合/Exception_02.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dubbo-provider/src/main/java/net/coderdaily/dubbo/service/DemoServiceImpl.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="3210">
+          <caret line="282" column="22" lean-forward="false" selection-start-line="282" selection-start-column="22" selection-end-line="282" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-consumer/src/main/java/net/coderdaily/DubboConsumerApplication.java">
+    <entry file="file://$PROJECT_DIR$/interview/src/main/java/Java基础/Accessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-provider/src/main/resources/provider.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="48" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-consumer/src/main/resources/consumer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-provider/src/main/java/net/coderdaily/DubboProviderApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-provider/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="61" lean-forward="true" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-consumer/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="24" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbodemo/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/dubboprovider/src/main/java/net/coderdaily/service/IDemoService.java" />
-    <entry file="file://$PROJECT_DIR$/dubboprovider/src/main/java/net/Application.java" />
-    <entry file="file://$PROJECT_DIR$/dubboprovider/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/dubbo-consumer/src/main/java/net/coderdaily/dubboconsumer/service/service.java" />
-    <entry file="file://$PROJECT_DIR$/dubbo-provider/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-consumer/src/test/java/net/coderdaily/dubboconsumer/DubboConsumerApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dubbo-provider/src/main/java/net/coderdaily/dubbo/service/IDemoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.10.RELEASE/spring-context-4.3.10.RELEASE.jar!/org/springframework/context/annotation/ImportResource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-consumer/src/main/java/net/coderdaily/dubbo/service/IDemoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -579,85 +678,288 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-consumer/mvnw.cmd">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4787">
+          <caret line="75" column="19" lean-forward="false" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/Iterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="52" column="3" lean-forward="false" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-provider/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="98" column="36" lean-forward="true" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-consumer/src/main/java/net/coderdaily/dubbo/service/IDemoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
+          <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dubbo-provider/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="37" column="61" lean-forward="false" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-consumer/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="53" column="27" lean-forward="true" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-provider/src/main/resources/provider.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="55" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="55" />
-          <folding />
+        <state relative-caret-position="390">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dubbo-consumer/src/main/resources/consumer.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="58" lean-forward="true" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/collection/AssociativeArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dubbo-provider/src/main/java/net/coderdaily/DubboProviderApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="75">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-consumer/.gitignore">
+    <entry file="file://$PROJECT_DIR$/dubbo-consumer/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="945">
+          <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-provider/src/main/resources/provider.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="81" lean-forward="false" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dubbo-consumer/src/main/java/net/coderdaily/DubboConsumerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1267">
+          <caret line="137" column="29" lean-forward="true" selection-start-line="137" selection-start-column="29" selection-end-line="137" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/io/B.java" />
+    <entry file="file://$PROJECT_DIR$/jdkdemo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/collection/HttpQuery.java" />
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/collection/Processon.java" />
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/collection/p2/B.java" />
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/collection/A.java" />
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/collection/HashMapInfiniteLoop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/SuperDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/Final_01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/Static_01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/Interface3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/Interface1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/Interface2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/Sequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="63" column="1" lean-forward="false" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/Class1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass_01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/LocalInner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass_02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/AnonymouseInnerClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="43" column="1" lean-forward="false" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/StaticInner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/MemberInner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass_03.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Boolean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-994">
+          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类/InnerClass_04.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/类型信息/C.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/综合/String_02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding>
+            <element signature="e#1044#1045#0" expanded="false" />
+            <element signature="e#1088#1089#0" expanded="false" />
+            <element signature="e#1140#1141#0" expanded="false" />
+            <element signature="e#1184#1185#0" expanded="false" />
+            <element signature="e#1212#1213#0" expanded="false" />
+            <element signature="e#1236#1237#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="147" column="3" lean-forward="false" selection-start-line="147" selection-start-column="3" selection-end-line="149" selection-end-column="5" />
+          <folding>
+            <element signature="e#5748#5749#0" expanded="false" />
+            <element signature="e#5784#5785#0" expanded="false" />
+            <element signature="e#10065#10066#0" expanded="false" />
+            <element signature="e#10148#10149#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/综合/String_01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/综合/String_03.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -665,14 +967,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/综合/Exception_01.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="405">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#252#263#0" expanded="true" />
+            <element signature="e#550#561#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdkdemo/src/main/java/综合/Exception_02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -680,9 +993,81 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>jdkdemo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.1.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
