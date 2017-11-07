@@ -24,7 +24,7 @@ public class InnerClass_02 {
             System.out.println(id);
         }
         //在定义域之外是不可以用的
-//        A a = new A("b......");
+//        IOC_01 a = new IOC_01("b......");
     }
 
     public void test() {
