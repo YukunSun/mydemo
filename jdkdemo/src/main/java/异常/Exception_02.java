@@ -1,4 +1,4 @@
-package 综合;
+package 异常;
 
 /**
  * Author: sun.yukun@foxmail.com

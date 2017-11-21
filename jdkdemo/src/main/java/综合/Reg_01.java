@@ -2,12 +2,11 @@ package 综合;
 
 /**
  * Author: sun.yukun@foxmail.com
- * Time: 2017/11/16 下午11:01
+ * Time: 2017/11/21 下午10:56
  * Blog: coderdaily.net
  */
-public class Integer_03 {
+public class Reg_01 {
     public static void main(String[] args) {
-        Integer a = null;
-        System.out.println(a == 0);
+        System.out.println("\\\\");
     }
 }

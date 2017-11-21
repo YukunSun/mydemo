@@ -1,4 +1,4 @@
-package 综合;
+package 包装类;
 
 /**
  * Author: sun.yukun@foxmail.com

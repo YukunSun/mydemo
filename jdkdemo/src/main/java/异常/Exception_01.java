@@ -1,4 +1,4 @@
-package 综合;
+package 异常;
 
 import java.util.ArrayList;
 import java.util.List;
