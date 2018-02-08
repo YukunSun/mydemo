@@ -6,4 +6,13 @@ package rtti;
  * Blog: coderdaily.net
  */
 public class Reference_05 {
+    public static void main(String[] args) {
+        String v = new String("abc");
+        f(v);
+        System.out.println(v);
+    }
+
+    private static void f(String v) {
+        v = "cde";
+    }
 }

@@ -6,4 +6,8 @@ package rtti;
  * Blog: coderdaily.net
  */
 public class RTTI_01 {
+    public static void main(String[] args) {
+        System.out.println(int.class);
+        System.out.println(RTTI_01.class);
+    }
 }

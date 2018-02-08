@@ -26,3 +26,6 @@ nbdist/
 
 *.mvn
 mvnw*
+
+*/.idea/
+*/*.iml

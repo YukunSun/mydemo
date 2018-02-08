@@ -4,8 +4,10 @@ package 综合;
  * @author: sun.yukun@foxmail.com
  * Time: 2017/12/5 上午9:42
  * Blog: coderdaily.net
+ * <p>
+ * 三目运算符
  */
-public class Sanmu_01 {
+public class ConditionalOperator_01 {
     public static void main(String[] args) {
         Object o_31 = false ? 'A' : (int) 65;
         Object o_32 = false ? (byte) 65 : (int) 65;

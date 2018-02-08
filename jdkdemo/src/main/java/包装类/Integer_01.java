@@ -14,5 +14,6 @@ public class Integer_01 {
         Integer b1 = 128;
         Integer b2 = 128;
         System.out.println(b1 == b2);//false
+        System.out.println(b1 <= b2);//true
     }
 }
