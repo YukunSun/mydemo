@@ -11,6 +11,8 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
+import java.util.Map;
+
 /**
  * @author: sun.yukun@foxmail.com
  * Time: 2018/3/1 下午5:17
@@ -23,7 +25,7 @@ public class HashTest {
     private CustomJedisConfig customJedisConfig;
 
     @Test
-    public void get() {
+    public void hget() {
         Jedis jedis = customJedisConfig.getJedis();
         jedis.hset("h1", "f0", "0");
         jedis.hset("h1", "f1", "1");
@@ -32,7 +34,9 @@ public class HashTest {
         jedis.hset("h1", "f4", "4");
 
         String r = jedis.hget("h1", "f2");
-        jedis.hgetAll("h1");
         System.out.println(r);
+
+        Map<String, String> map = jedis.hgetAll("h1");
+        System.out.println(map);
     }
 }
