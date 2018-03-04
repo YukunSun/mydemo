@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/dubbo-provider/pom.xml" />
         <option value="$PROJECT_DIR$/interview/pom.xml" />
         <option value="$PROJECT_DIR$/jdkdemo/pom.xml" />
+        <option value="$PROJECT_DIR$/redis/pom.xml" />
       </list>
     </option>
   </component>

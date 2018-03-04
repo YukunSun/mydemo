@@ -10,6 +10,7 @@
         <module name="dubbo-provider" />
         <module name="interview" />
         <module name="jdkdemo" />
+        <module name="redis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
       <module name="dubboprovider" target="1.5" />
       <module name="interview" target="1.5" />
       <module name="jdkdemo" target="1.5" />
+      <module name="redis" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

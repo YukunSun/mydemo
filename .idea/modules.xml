@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/interview/interview.iml" filepath="$PROJECT_DIR$/interview/interview.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdkdemo/jdkdemo.iml" filepath="$PROJECT_DIR$/jdkdemo/jdkdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/mydemo.iml" filepath="$PROJECT_DIR$/.idea/mydemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
     </modules>
   </component>
 </project>

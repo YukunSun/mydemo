@@ -1,5 +1,6 @@
 package nowcoder;
 
+import nowcoder.util.LinkedList;
 import nowcoder.util.ListNode;
 
 import java.util.ArrayList;
@@ -12,13 +13,27 @@ import java.util.ArrayList;
  * 输入一个链表，从尾到头打印链表每个节点的值。
  */
 public class Solution_03 {
-    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-        return null;
+    ArrayList<Integer> result = new ArrayList<Integer>();
 
+    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+        if (listNode != null) {
+            this.printListFromTailToHead(listNode.next);
+            result.add(listNode.val);
+        }
+        return result;
     }
 
     public static void main(String[] args) {
         Solution_03 s = new Solution_03();
-        ListNode node = new ListNode(1);
+        LinkedList linkedList = new LinkedList();
+        linkedList.addTail(1);
+        linkedList.addTail(2);
+        linkedList.addTail(3);
+        linkedList.addTail(4);
+        linkedList.addTail(5);
+        linkedList.printLinkedList();
+
+        ArrayList<Integer> result = s.printListFromTailToHead(linkedList.getHead());
+        System.out.println(result);
     }
 }

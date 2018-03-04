@@ -7,11 +7,11 @@ package nowcoder.util;
  * <p>
  * 构造链表接点
  */
-public class LinkedListNode {
-    private int value;
-    private LinkedListNode next = null;
+public class ListNode {
+    public int val;
+    public ListNode next = null;
 
-    public LinkedListNode(int value) {
-        this.value = value;
+    public ListNode(int value) {
+        this.val = value;
     }
 }
