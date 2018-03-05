@@ -34,6 +34,8 @@ public class CustomJedisConfig {
      * @return
      */
     public Jedis getJedis() {
-        return this.getJedisPool().getResource();
+        Jedis jedis = this.getJedisPool().getResource();
+        System.out.println(">>> redis is running：" + jedis.ping());
+        return jedis;
     }
 }
