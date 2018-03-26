@@ -9,18 +9,21 @@
         <module name="dubbo-consumer" />
         <module name="dubbo-provider" />
         <module name="interview" />
-        <module name="jdkdemo" />
+        <module name="jdk-demo" />
+        <module name="mydemo" />
         <module name="redis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="dubbo-consumer" target="1.8" />
       <module name="dubbo-provider" target="1.8" />
-      <module name="dubbodemo" target="1.5" />
-      <module name="dubboprovider" target="1.5" />
       <module name="interview" target="1.5" />
-      <module name="jdkdemo" target="1.5" />
+      <module name="jdk-demo" target="1.8" />
+      <module name="mydemo" target="1.8" />
       <module name="redis" target="1.6" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="DEBUGGING_INFO" value="false" />
   </component>
 </project>
