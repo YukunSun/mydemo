@@ -5,6 +5,7 @@
 - jdk一些API、类的demo示例
 - 算法题
 - guava
+- rabbit-mq
 
 持续更新...
 
