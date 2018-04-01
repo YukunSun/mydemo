@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class GuavaDemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(GuavaDemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(GuavaDemoApplication.class, args);
+    }
 }

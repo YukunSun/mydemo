@@ -25,6 +25,8 @@
         <module>interview</module>
         <module>redis</module>
         <module>jdkdemo</module>
+        <module>guava-demo</module>
+        <module>rabbitmq-demo</module>
     </modules>
 
 </project>

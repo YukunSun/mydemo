@@ -42,6 +42,11 @@
             <version>23.5-jre</version>
             <!-- or 23.5-android for the Android flavor -->
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>1.5.8.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <build>
