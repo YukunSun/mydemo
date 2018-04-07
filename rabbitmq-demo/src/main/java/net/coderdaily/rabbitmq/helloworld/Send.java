@@ -1,4 +1,4 @@
-package net.coderdaily.rabbitmq.demo;
+package net.coderdaily.rabbitmq.helloworld;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
