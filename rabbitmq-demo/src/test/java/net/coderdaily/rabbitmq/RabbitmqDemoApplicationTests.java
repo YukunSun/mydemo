@@ -24,13 +24,17 @@ public class RabbitmqDemoApplicationTests {
     public void sendMsg() {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
+        factory.setPort(5672);
         try {
             Connection connection = factory.newConnection();
             Channel channel = connection.createChannel();
 
+
+
+
 //            关闭
-//            connection.close();
-//            channel.close();
+            connection.close();
+            channel.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
