@@ -18,12 +18,18 @@ public class BIOTest {
     private static final String HOST = "127.0.0.1";
     private static final int PORT = 8080;
 
+    /**
+     * server
+     *
+     * @throws IOException
+     */
     @Test
     public void testServer() throws IOException {
         ServerSocket server = new ServerSocket(PORT);
         Socket socket = null;
         System.out.println("server start...");
         while (true) {
+            //阻塞方法
             socket = server.accept();
             new Thread(new ServerHandler(socket)).start();
         }
@@ -47,7 +53,7 @@ public class BIOTest {
                 while (true) {
                     body = in.readLine();
                     if (body != null) {
-                        System.out.println("server receive client's data:" + body);
+                        System.out.println(Thread.currentThread().getId() + ",server receive client's data:" + body);
                         out.println("response:" + body);
                     }
                 }
@@ -57,6 +63,11 @@ public class BIOTest {
         }
     }
 
+    /**
+     * client
+     *
+     * @throws IOException
+     */
     @Test
     public void testClient() throws IOException {
         Socket socket = new Socket(HOST, PORT);
