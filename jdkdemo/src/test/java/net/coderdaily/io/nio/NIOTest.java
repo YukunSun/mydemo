@@ -1,4 +1,4 @@
-package net.coderdaily.io;
+package net.coderdaily.io.nio;
 
 import org.junit.Test;
 

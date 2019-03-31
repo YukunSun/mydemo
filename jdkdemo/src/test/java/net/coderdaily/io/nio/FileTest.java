@@ -1,4 +1,4 @@
-package net.coderdaily.io;
+package net.coderdaily.io.nio;
 
 import org.junit.Test;
 
@@ -52,7 +52,7 @@ public class FileTest {
      */
     @Test
     public void bufferedReaderTest() throws FileNotFoundException, IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("/Users/sunyk/Documents/ideaworks/mydemo/jdkdemo/src/test/java/net/coderdaily/io/FileTest.java"));
+        BufferedReader reader = new BufferedReader(new FileReader("/Users/sunyk/Documents/ideaworks/mydemo/jdkdemo/src/test/java/net/coderdaily/nio/FileTest.java"));
         StringBuilder builder = new StringBuilder();
         String s;
         while ((s = reader.readLine()) != null) {
