@@ -13,6 +13,8 @@ import java.net.Socket;
  * @author: sun.yukun@foxmail.com
  * Time: 2019-03-31 13:46
  * Blog: coderdaily.net
+ *
+ * 同步阻塞IO，意味着每个请求都是阻塞的，服务端为客户端的每一个请求来创建一个线程进行处理数据
  */
 public class BIOTest {
     private static final String HOST = "127.0.0.1";
