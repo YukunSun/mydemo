@@ -2,6 +2,8 @@ package leetcode;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author: sun.yukun@foxmail.com
@@ -14,25 +16,32 @@ import java.util.Collections;
  * 4.相等怎么办
  */
 public class Solution1 {
-    //暴力遍历
+    //brute force
     public int[] twoSum(int[] nums, int target) {
-        int[] result = {-1, -1};
         for (int i = 0; i < nums.length; i++) {
             int first = nums[i];
             int second = target - first;
             for (int j = i + 1; j < nums.length; j++) {
                 if (second == nums[j]) {
-                    result[0] = i;
-                    result[1] = j;
-                    return result;
+                    return new int[]{i, j};
                 }
             }
         }
-        return result;
+        throw new IllegalArgumentException("not found");
     }
 
+    //hash 思想
     public int[] twoSum2(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for (int i = 0; i < nums.length; i++) {
+            int first = nums[i];
+            int second = target - first;
 
+            if (map.containsKey(second)) {
+                return new int[]{i, map.get(second)};
+            }
+            map.put(first, i);
+        }
         return null;
     }
 
