@@ -49,4 +49,19 @@ public class ZkTest01 {
 
         master.stopZk();
     }
+
+    @Test
+    public void saveMetaDataTest() throws IOException, InterruptedException {
+        final String hostPort = "127.0.0.1:2181";
+        MetaData master = new MetaData(hostPort);
+        master.startZk();
+
+        master.createParent("/workers", new byte[0]);
+        master.createParent("/assign", new byte[0]);
+        master.createParent("/tasks", new byte[0]);
+        master.createParent("/status", new byte[0]);
+
+        Thread.sleep(5000);
+        master.stopZk();
+    }
 }

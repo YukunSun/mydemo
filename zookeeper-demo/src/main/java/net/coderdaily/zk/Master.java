@@ -17,6 +17,9 @@ public class Master implements Watcher {
     String serverId = Long.toString(new Random(10000L).nextLong());
     boolean isLeader = false;
 
+    public Master() {
+    }
+
     public Master(String hostPort) {
         this.hostPort = hostPort;
     }
