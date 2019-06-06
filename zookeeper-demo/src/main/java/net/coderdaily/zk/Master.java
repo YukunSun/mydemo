@@ -57,7 +57,7 @@ public class Master implements Watcher {
         }
     }
 
-    //选举主节点
+    //选举主节点1：同步方式
     void runForMaster() throws InterruptedException {
         while (true) {
             try {
@@ -77,6 +77,50 @@ public class Master implements Watcher {
             }
         }
     }
+
+    /**
+     * 选举主节点2：异步方式
+     */
+    void runForMasterAsync() {
+        zk.create("/master", serverId.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL, createCallback, null);
+    }
+
+    /**
+     * 回调函数
+     */
+    AsyncCallback.StringCallback createCallback = new AsyncCallback.StringCallback() {
+        public void processResult(int rc, String path, Object ctx, String name) {
+            switch (KeeperException.Code.get(rc)) {
+                case OK:
+                    isLeader = true;
+                    break;
+                case CONNECTIONLOSS://重试
+                    checkMasterAsync();
+                    return;
+                default:
+                    isLeader = false;
+            }
+            System.out.println("i am " + (isLeader ? "" : "not") + "leader...");
+        }
+    };
+
+    void checkMasterAsync() {
+        zk.getData("/master", false, checkCallback, null);
+    }
+
+    AsyncCallback.DataCallback checkCallback = new AsyncCallback.DataCallback() {
+        public void processResult(int rc, String s, Object o, byte[] bytes, Stat stat) {
+            switch (KeeperException.Code.get(rc)) {
+                case NONODE:
+                    runForMasterAsync();
+                    return;
+                case CONNECTIONLOSS:
+                    checkMasterAsync();
+                    break;
+            }
+        }
+    };
+
 
     public static void main(String[] args) throws IOException, InterruptedException {
         final String hostPort = "127.0.0.1:2181";

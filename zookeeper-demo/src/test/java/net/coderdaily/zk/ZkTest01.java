@@ -21,7 +21,7 @@ public class ZkTest01 {
     }*/
 
     @Test
-    public void runForMaster() throws IOException, InterruptedException {
+    public void runForMasterTest() throws IOException, InterruptedException {
         final String hostPort = "127.0.0.1:2181";
         Master master = new Master(hostPort);
         master.startZk();
@@ -34,6 +34,19 @@ public class ZkTest01 {
         } else {
             System.out.println("someone else is leader");
         }
+        master.stopZk();
+    }
+
+    @Test
+    public void runForMasterAsyncTest() throws InterruptedException, IOException {
+        final String hostPort = "127.0.0.1:2181";
+        Master master = new Master(hostPort);
+        master.startZk();
+
+        master.runForMasterAsync();
+
+        Thread.sleep(5000);
+
         master.stopZk();
     }
 }
