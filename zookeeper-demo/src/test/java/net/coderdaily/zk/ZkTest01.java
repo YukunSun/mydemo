@@ -79,9 +79,13 @@ public class ZkTest01 {
     public void registerWorkersTest() throws IOException, InterruptedException {
         Worker worker = new Worker(hostPort);
         worker.startZk();
-
+//注册从节点
         worker.register();
 
-        Thread.sleep(1000);
+//do sth
+        worker.setStatus("Working");
+
+        Thread.sleep(20000);
+
     }
 }

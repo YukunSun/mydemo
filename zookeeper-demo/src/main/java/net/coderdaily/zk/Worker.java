@@ -1,6 +1,7 @@
 package net.coderdaily.zk;
 
 import org.apache.zookeeper.*;
+import org.apache.zookeeper.data.Stat;
 
 import java.io.IOException;
 import java.util.Random;
@@ -16,6 +17,7 @@ public class Worker implements Watcher {
     ZooKeeper zk;
     String hostPort;
     String serverId = Long.toString(new Random(10000L).nextLong());
+    private String status;
 
     public Worker(String hostPort) {
         this.hostPort = hostPort;
@@ -30,7 +32,7 @@ public class Worker implements Watcher {
     }
 
     void register() {
-        zk.create("/workers/worker-" + serverId,
+        zk.create("/workers/worker" + serverId,
                 "Idle".getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE,
                 CreateMode.EPHEMERAL,
@@ -56,4 +58,30 @@ public class Worker implements Watcher {
             }
         }
     };
+
+    AsyncCallback.StatCallback statUpdateCallback = new AsyncCallback.StatCallback() {
+        public void processResult(int rc, String path, Object ctx, Stat stat) {
+            switch (KeeperException.Code.get(rc)) {
+                case CONNECTIONLOSS:
+                    updateStatus((String) ctx);
+                    break;
+            }
+        }
+    };
+
+    public void setStatus(String status) {
+        this.status = status;
+        updateStatus(status);
+    }
+
+    //加锁，避免多线程写入时乱序
+    synchronized private void updateStatus(String status) {
+        if (status.equals(this.status)) {
+            zk.setData("/workers" + serverId,
+                    status.getBytes(),
+                    -1,
+                    statUpdateCallback,
+                    status);
+        }
+    }
 }
