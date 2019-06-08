@@ -13,19 +13,23 @@ public class ZkTest01 {
 
     final String hostPort = "127.0.0.1:2181";
 
-    /*@Test
-    public void test() throws IOException, InterruptedException {
-        final String hostPort = "127.0.0.1:2181";
+    @Test
+    public void sessionTrackTest() throws IOException, InterruptedException {
         Master master = new Master(hostPort);
 
         master.startZk();
 
         Thread.sleep(12000);
-    }*/
+        /**
+         * 如果程序退出，但没到sessionTimeout设置的超时时间，session依然会保存，除非直接调用zk.close()
+         *
+         * 1.可以使用telnet 连接zk，然后使用dump命令查看session信息
+         */
+        master.stopZk();
+    }
 
     @Test
     public void runForMasterTest() throws IOException, InterruptedException {
-        final String hostPort = "127.0.0.1:2181";
         Master master = new Master(hostPort);
         master.startZk();
 
@@ -42,7 +46,6 @@ public class ZkTest01 {
 
     @Test
     public void runForMasterAsyncTest() throws InterruptedException, IOException {
-        final String hostPort = "127.0.0.1:2181";
         Master master = new Master(hostPort);
         master.startZk();
 
@@ -55,7 +58,6 @@ public class ZkTest01 {
 
     @Test
     public void saveMetaDataTest() throws IOException, InterruptedException {
-        final String hostPort = "127.0.0.1:2181";
         MetaData master = new MetaData(hostPort);
         master.startZk();
 

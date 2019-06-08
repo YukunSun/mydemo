@@ -123,14 +123,4 @@ public class Master implements Watcher {
             }
         }
     };
-
-
-    public static void main(String[] args) throws IOException, InterruptedException {
-        final String hostPort = "127.0.0.1:2181";
-        Master master = new Master(hostPort);
-
-        master.startZk();
-        Thread.sleep(12000);
-        master.stopZk();
-    }
 }
