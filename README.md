@@ -6,6 +6,7 @@
 - 算法题
 - guava
 - rabbit-mq
+- zookeeper
 
 持续更新...
 

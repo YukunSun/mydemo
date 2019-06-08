@@ -10,6 +10,9 @@ import java.io.IOException;
  * Blog: coderdaily.net
  */
 public class ZkTest01 {
+
+    final String hostPort = "127.0.0.1:2181";
+
     /*@Test
     public void test() throws IOException, InterruptedException {
         final String hostPort = "127.0.0.1:2181";
@@ -63,5 +66,20 @@ public class ZkTest01 {
 
         Thread.sleep(5000);
         master.stopZk();
+    }
+
+    /**
+     * 注册从节点
+     *
+     * @throws IOException
+     */
+    @Test
+    public void registerWorkersTest() throws IOException, InterruptedException {
+        Worker worker = new Worker(hostPort);
+        worker.startZk();
+
+        worker.register();
+
+        Thread.sleep(1000);
     }
 }
