@@ -15,5 +15,11 @@ public class String_01 {
 
         String str4 = "hello2".intern();
         System.out.println(str4);
+
+        String str5 = "he" + "llo";
+        System.out.println(str1 == str5);
+
+        String str6 = "he" + new String("llo");
+        System.out.println(str1 == str6);
     }
 }
