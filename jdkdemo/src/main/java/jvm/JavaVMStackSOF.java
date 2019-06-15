@@ -8,7 +8,7 @@ package jvm;
  * -Xss160k
  */
 public class JavaVMStackSOF {
-    private int stackLength = 1;
+    private static int stackLength = 1;
 
     public void stackLeak() {
         stackLength++;
@@ -19,8 +19,9 @@ public class JavaVMStackSOF {
         JavaVMStackSOF stackSOF = new JavaVMStackSOF();
         try {
             stackSOF.stackLeak();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Throwable e) {
+            System.out.println("栈的深度：" + stackLength);
+            throw e;
         }
     }
 }
