@@ -9,9 +9,27 @@ import java.io.Serializable;
  * <p>
  * 用于测试的类
  */
-public class Foo implements Serializable{
+public class Foo implements Serializable {
+    private Long id;
     private String name;
     private Integer age;
+
+    public Foo() {
+    }
+
+    public Foo(Long id, String name, Integer age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -32,7 +50,8 @@ public class Foo implements Serializable{
     @Override
     public String toString() {
         return "Foo{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 '}';
     }
