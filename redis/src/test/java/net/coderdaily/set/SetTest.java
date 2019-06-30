@@ -1,34 +1,14 @@
 package net.coderdaily.set;
 
-import net.coderdaily.util.CustomJedisConfig;
-import org.junit.Before;
+import net.coderdaily.util.AbstractJedis;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.ScanParams;
-import redis.clients.jedis.ScanResult;
 
 /**
  * @author: sun.yukun@foxmail.com
  * Time: 2018/3/4 下午1:37
  * Blog: coderdaily.net
  */
-@SpringBootTest
-@RunWith(SpringRunner.class)
-public class SetTest {
-    @Autowired
-    private CustomJedisConfig customJedisConfig;
-
-    private Jedis jedis;
-
-    @Before
-    public void getJedis() {
-        jedis = customJedisConfig.getJedis();
-    }
-
+public class SetTest extends AbstractJedis {
     @Test
     public void s_all_operation() {
         jedis.sadd("skey", "m1", "m2");
