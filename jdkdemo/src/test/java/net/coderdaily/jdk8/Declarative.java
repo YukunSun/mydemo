@@ -1,4 +1,4 @@
-package lambda;
+package net.coderdaily.jdk8;
 
 import java.util.Arrays;
 
