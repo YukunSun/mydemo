@@ -13,19 +13,7 @@ import java.util.function.IntConsumer;
  * <p>
  * 函数式编程
  */
-public class FunctionalProgrammingTest {
-    /**
-     * 理解注解 @FunctionalInterface
-     */
-    @FunctionalInterface
-    public interface IntHandler {
-        //        只能有一个抽象方法
-        void handler(int i);
-
-        //        java.lang.Object中的方法算作“实例方法”
-        boolean equals(Object o);
-    }
-
+public class FunctionalTest2 {
     /**
      * 理解lambda表达式： ->
      */
