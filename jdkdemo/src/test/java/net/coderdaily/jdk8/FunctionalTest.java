@@ -22,8 +22,8 @@ public class FunctionalTest {
     }
 
 
-    //例2：
-    //这里User显然是有两个构造函数，？？
+    //例2：UserFactory 是 User 的工厂类，是一个函数式接口
+    //这里的 User显然是有两个构造函数的，难道是根据参数类型区别出来的？？？
     static UserFactory<User> uf = User::new;
 
     @FunctionalInterface
