@@ -1,4 +1,4 @@
-package collection;
+package net.coderdaily.collection;
 
 import java.util.ArrayList;
 import java.util.Arrays;
