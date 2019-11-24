@@ -56,6 +56,16 @@ public class IteratorTest {
             System.out.println("s = " + s);
         }
     }
+
+    /**
+     * 所有的 Collection 类都是 Iterable 类型，但是不包括 Map
+     */
+    @Test
+    public void map() {
+        for (Map.Entry entry : System.getenv().entrySet()) {
+            System.out.println("entry = " + entry);
+        }
+    }
 }
 
 class IterableClass implements Iterable<String> {
