@@ -2,14 +2,19 @@ package net.coderdaily.generics;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 /**
  * @author: sun.yukun@foxmail.com
  * Time: 2019/12/12 08:13
  * Blog: coderdaily.net
+ * <p>
+ * 这些都是泛型的演示
  */
 public class ExampleTest {
     @Test
-    public void test() {
+    public void stackTest() {
         LinkedStack<String> stack = new LinkedStack<>();
         for (String s : "hello world foo bar".split(" ")) {
             stack.push(s);
@@ -23,7 +28,35 @@ public class ExampleTest {
             //s = hello
         }
     }
+
+    /**
+     * 实现一个随机取数据的 List
+     */
+    @Test
+    public void randomListTest() {
+        RandomList<String> list = new RandomList<>();
+        for (String i : "hello world foo bar".split(" ")) {
+            list.add(i);
+        }
+        for (int i = 0; i < 10; i++) {
+            System.out.println("list.select() = " + list.select());
+        }
+    }
 }
+
+class RandomList<T> {
+    private ArrayList<T> storage = new ArrayList<>();
+    private Random rand = new Random(47);
+
+    public void add(T item) {
+        storage.add(item);
+    }
+
+    public T select() {
+        return storage.get(rand.nextInt(storage.size()));
+    }
+}
+
 
 /**
  * custom stack
