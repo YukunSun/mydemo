@@ -31,16 +31,16 @@ public class ExampleTest {
  * @param <T>
  */
 class LinkedStack<T> {
-    private static class Node<U> {
-        U item;
-        Node<U> next;
+    private static class Node<T> {
+        T item;
+        Node<T> next;
 
         public Node() {
             item = null;
             next = null;
         }
 
-        public Node(U item, Node<U> next) {
+        public Node(T item, Node<T> next) {
             this.item = item;
             this.next = next;
         }
