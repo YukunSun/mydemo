@@ -3,6 +3,7 @@ package net.coderdaily.generics;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 
 /**
@@ -13,6 +14,21 @@ import java.util.Random;
  * 这些都是泛型的演示
  */
 public class ExampleTest {
+
+    /**
+     * 随机生成一个 Coffee 类型的对象
+     */
+    @Test
+    public void generatorTest() throws InstantiationException, IllegalAccessException {
+        CoffeeGenerator generator = new CoffeeGenerator();
+        for (int i = 0; i < 10; i++) {
+            System.out.println("generator = " + generator.next());
+        }
+        for (Object coffee : new CoffeeGenerator(5)) {
+            System.out.println("coffee = " + coffee);
+        }
+    }
+
     @Test
     public void stackTest() {
         LinkedStack<String> stack = new LinkedStack<>();
@@ -42,6 +58,71 @@ public class ExampleTest {
             System.out.println("list.select() = " + list.select());
         }
     }
+}
+
+
+class CoffeeGenerator<Coffee> implements Generator<Coffee>, Iterable<Coffee> {
+    private Class[] types = {Latte.class, Mocha.class, Cappuccino.class};
+    private static Random random = new Random(30);
+    private int size = 0;
+
+    public CoffeeGenerator(int size) {
+        this.size = size;
+    }
+
+    public CoffeeGenerator() {
+    }
+
+    @Override
+    public Iterator<Coffee> iterator() {
+        return new CoffeeIterator();
+    }
+
+    @Override
+    public Coffee next() throws IllegalAccessException, InstantiationException {
+        return (Coffee) types[random.nextInt(types.length)].newInstance();
+    }
+
+    class CoffeeIterator implements Iterator<Coffee> {
+        int count = size;
+
+        @Override
+        public boolean hasNext() {
+            return count > 0;
+        }
+
+        @Override
+        public Coffee next() {
+            count--;
+            try {
+                return CoffeeGenerator.this.next();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
+}
+
+class Coffee {
+    private static long counter = 0;
+    private final long id = counter++;
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + " " + id;
+    }
+}
+
+class Latte extends Coffee {
+}
+
+class Mocha extends Coffee {
+}
+
+class Cappuccino extends Coffee {
 }
 
 class RandomList<T> {
