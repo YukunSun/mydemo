@@ -13,5 +13,5 @@ public interface Generator<T> {
      *
      * @return
      */
-    T next() throws IllegalAccessException, InstantiationException;
+    T next();
 }

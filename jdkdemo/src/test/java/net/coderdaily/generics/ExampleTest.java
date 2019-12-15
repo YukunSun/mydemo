@@ -11,9 +11,21 @@ import java.util.Random;
  * Time: 2019/12/12 08:13
  * Blog: coderdaily.net
  * <p>
- * 这些都是泛型的演示
+ * 这些都是泛型的演示:用在类上
  */
 public class ExampleTest {
+
+    @Test
+    public void fibonacciTest() {
+        Fibonacci fibonacci = new Fibonacci();
+        for (int i = 0; i < 10; i++) {
+            System.out.println("fibonacci = " + fibonacci.next());
+        }
+        //加一个 iterable 的功能
+        for (int i : new IterableFibonacci(10)) {
+            System.out.println("i = " + i);
+        }
+    }
 
     /**
      * 随机生成一个 Coffee 类型的对象
@@ -60,6 +72,47 @@ public class ExampleTest {
     }
 }
 
+class IterableFibonacci extends Fibonacci implements Iterable<Integer> {
+    private int n;
+
+    public IterableFibonacci(int n) {
+        this.n = n;
+    }
+
+    @Override
+    public Iterator<Integer> iterator() {
+        return new Iterator<Integer>() {
+            @Override
+            public boolean hasNext() {
+                return n > 0;
+            }
+
+            @Override
+            public Integer next() {
+                n--;
+                return IterableFibonacci.this.next();
+            }
+        };
+    }
+}
+
+class Fibonacci implements Generator<Integer> {
+    private int count = 0;
+
+    @Override
+    public Integer next() {
+
+        return fib(count++);
+    }
+
+    private int fib(int n) {
+        if (n < 2) {
+            return 1;
+        }
+        return fib(n - 2) + fib(n - 1);
+    }
+}
+
 
 class CoffeeGenerator<Coffee> implements Generator<Coffee>, Iterable<Coffee> {
     private Class[] types = {Latte.class, Mocha.class, Cappuccino.class};
@@ -79,8 +132,15 @@ class CoffeeGenerator<Coffee> implements Generator<Coffee>, Iterable<Coffee> {
     }
 
     @Override
-    public Coffee next() throws IllegalAccessException, InstantiationException {
-        return (Coffee) types[random.nextInt(types.length)].newInstance();
+    public Coffee next() {
+        try {
+            return (Coffee) types[random.nextInt(types.length)].newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     class CoffeeIterator implements Iterator<Coffee> {
@@ -94,14 +154,7 @@ class CoffeeGenerator<Coffee> implements Generator<Coffee>, Iterable<Coffee> {
         @Override
         public Coffee next() {
             count--;
-            try {
-                return CoffeeGenerator.this.next();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            } catch (InstantiationException e) {
-                e.printStackTrace();
-            }
-            return null;
+            return CoffeeGenerator.this.next();
         }
     }
 }
