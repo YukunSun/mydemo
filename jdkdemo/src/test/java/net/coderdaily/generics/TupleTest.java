@@ -18,6 +18,15 @@ public class TupleTest {
         ThreeTuple<String, Integer, Double> threeTuple = new ThreeTuple<>("hello", 12, 1.1);
         System.out.println("threeTuple = " + threeTuple);
     }
+
+    /**
+     * 好方便的 util
+     */
+    @Test
+    public void genericTupleTest() {
+        System.out.println("Tuple.tuple(\"hello\",21) = " + Tuple.tuple("hello", 21));
+        System.out.println("Tuple.tuple(22.3,\"world\",false) = " + Tuple.tuple(22.3, "world", false));
+    }
 }
 
 class TwoTuple<A, B> {
