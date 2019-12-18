@@ -48,6 +48,26 @@ public class ExampleTest2 {
         Collection<Integer> numbers = Generators.fill(new ArrayList<Integer>(), new Fibonacci(), 12);
         System.out.println("numbers = " + numbers);
     }
+
+    @Test
+    public void test4() {
+        for (int i = 0; i < 5; i++) {
+            Generator<CountedObject> generator = BasicGenerator.create(CountedObject.class);
+            System.out.println("CountedObject = " + generator.next());
+        }
+    }
+}
+
+class CountedObject {
+    private static int count = 0;
+    private final int id = count++;
+
+    @Override
+    public String toString() {
+        return "CountedObject{" +
+                "id=" + id +
+                '}';
+    }
 }
 
 class Generators {
