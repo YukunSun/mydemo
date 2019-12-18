@@ -3,10 +3,7 @@ package net.coderdaily.generics;
 import net.coderdaily.jdk8.util.User;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author: sun.yukun@foxmail.com
@@ -42,7 +39,26 @@ public class ExampleTest2 {
         New.fun(New.map());
         New.<User, List<Test>>fun(New.map());
     }
+
+    @Test
+    public void generatorsTest() {
+        Collection<Coffee> coffees = Generators.fill(new ArrayList<Coffee>(), new CoffeeGenerator<>(), 4);
+        System.out.println("coffees = " + coffees);
+
+        Collection<Integer> numbers = Generators.fill(new ArrayList<Integer>(), new Fibonacci(), 12);
+        System.out.println("numbers = " + numbers);
+    }
 }
+
+class Generators {
+    public static <T> Collection<T> fill(Collection<T> coll, Generator<T> gen, int n) {
+        for (int i = 0; i < n; i++) {
+            coll.add(gen.next());
+        }
+        return coll;
+    }
+}
+
 
 class New {
     public static <K, V> Map<K, V> map() {
