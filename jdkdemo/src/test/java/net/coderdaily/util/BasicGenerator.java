@@ -1,4 +1,4 @@
-package net.coderdaily.generics;
+package net.coderdaily.util;
 
 /**
  * @author: sun.yukun@foxmail.com

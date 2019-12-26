@@ -1,5 +1,6 @@
 package net.coderdaily.generics;
 
+import net.coderdaily.util.Generator;
 import org.junit.Test;
 
 import java.util.ArrayList;

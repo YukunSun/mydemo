@@ -1,6 +1,9 @@
 package net.coderdaily.generics;
 
 import net.coderdaily.jdk8.util.User;
+import net.coderdaily.util.BasicGenerator;
+import net.coderdaily.util.Generator;
+import net.coderdaily.util.Generators;
 import org.junit.Test;
 
 import java.util.*;
@@ -67,15 +70,6 @@ class CountedObject {
         return "CountedObject{" +
                 "id=" + id +
                 '}';
-    }
-}
-
-class Generators {
-    public static <T> Collection<T> fill(Collection<T> coll, Generator<T> gen, int n) {
-        for (int i = 0; i < n; i++) {
-            coll.add(gen.next());
-        }
-        return coll;
     }
 }
 
