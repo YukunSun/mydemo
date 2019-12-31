@@ -79,6 +79,15 @@ public class ExampleTest6 {
         System.out.println("capture2.f(new House()) = " + capture2.f(new House()));//true
         System.out.println("(Building)new House() = " + (House) new Building());//java.lang.ClassCastException: net.coderdaily.generics.Building cannot be cast to net.coderdaily.generics.House
     }
+
+    @Test
+    public void test6() {
+        System.out.println("new Building().getClass().isInstance(new House()) = " + new Building().getClass().isInstance(new House()));//true
+        System.out.println("new House().getClass().isInstance(new Building()) = " + new House().getClass().isInstance(new Building()));//false
+        System.out.println(new House() instanceof House);//true
+        System.out.println(new Building() instanceof House);//false
+        System.out.println(new House() instanceof Building);//true
+    }
 }
 
 class Building {
