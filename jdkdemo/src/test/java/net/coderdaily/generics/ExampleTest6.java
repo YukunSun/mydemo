@@ -14,7 +14,7 @@ import java.util.*;
  */
 public class ExampleTest6 {
     @Test
-    public void test1() {
+    public void testGenericErase() {
         Class c1 = new ArrayList<Integer>().getClass();
         Class c2 = new ArrayList<String>().getClass();
         System.out.println(c1);//class java.util.ArrayList
@@ -25,7 +25,7 @@ public class ExampleTest6 {
      * 通过输出内容可以观察到：只剩占位符了，相关的参数信息却没有......
      */
     @Test
-    public void test2() {
+    public void testGenericErase2() {
         class Frob {
         }
 
@@ -80,13 +80,39 @@ public class ExampleTest6 {
         System.out.println("(Building)new House() = " + (House) new Building());//java.lang.ClassCastException: net.coderdaily.generics.Building cannot be cast to net.coderdaily.generics.House
     }
 
+    /**
+     * isInstance demo
+     */
     @Test
-    public void test6() {
+    public void testInstance() {
         System.out.println("new Building().getClass().isInstance(new House()) = " + new Building().getClass().isInstance(new House()));//true
         System.out.println("new House().getClass().isInstance(new Building()) = " + new House().getClass().isInstance(new Building()));//false
         System.out.println(new House() instanceof House);//true
         System.out.println(new Building() instanceof House);//false
         System.out.println(new House() instanceof Building);//true
+    }
+
+    /**
+     * 工厂类:v1
+     */
+    @Test
+    public void testFactory() {
+        ClassAsFactory<Employee> fe = new ClassAsFactory<>(Employee.class);
+        System.out.println("fe.x = " + fe.x);
+
+        ClassAsFactory<Integer> fe2 = new ClassAsFactory<>(Integer.class);//throw exception:因为 Integer 没有默认的构造函数
+        System.out.println("fe2.x = " + fe2.x);
+    }
+
+    /**
+     * 工厂类：v2
+     */
+    @Test
+    public void testFactory2() {
+        System.out.println(" new Foo<Integer>(new IntegerFactory()) = " + new Foo<Integer>(new IntegerFactory()));
+        ;
+        System.out.println("new Foo<Widget>(new Widget.Factory()) = " + new Foo<Widget>(new Widget.Factory()));
+        ;
     }
 }
 
@@ -139,5 +165,51 @@ class Erased<T> {
 //        T var = new T();//error
 //        T[] array = new T[SIZE];//error
 //        T[] array2 = (T)new Object[SIZE];
+    }
+}
+
+class ClassAsFactory<T> {
+    T x;
+
+    public ClassAsFactory(Class<T> kind) {
+        try {
+            x = kind.newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+class Employee {
+}
+
+interface FactoryInterface<T> {
+    T create();
+}
+
+class Foo<T> {
+    private T x;
+
+    public <F extends FactoryInterface<T>> Foo(F factory) {
+        x = factory.create();
+    }
+}
+
+class IntegerFactory implements FactoryInterface<Integer> {
+    @Override
+    public Integer create() {
+        return new Integer(0);
+    }
+}
+
+class Widget {
+    public static class Factory implements FactoryInterface<Widget> {
+
+        @Override
+        public Widget create() {
+            return new Widget();
+        }
     }
 }
