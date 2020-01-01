@@ -110,11 +110,37 @@ public class ExampleTest6 {
     @Test
     public void testFactory2() {
         System.out.println(" new Foo<Integer>(new IntegerFactory()) = " + new Foo<Integer>(new IntegerFactory()));
-        ;
         System.out.println("new Foo<Widget>(new Widget.Factory()) = " + new Foo<Widget>(new Widget.Factory()));
-        ;
+    }
+
+    /**
+     * 模板方法的设计模式
+     */
+    @Test
+    public void testTemplate() {
+        Creator c = new Creator();
+        System.out.println("c = " + c);
     }
 }
+
+abstract class GenericWithCreate<T> {
+    final T element;
+
+    GenericWithCreate() {
+        this.element = create();
+    }
+
+    protected abstract T create();
+}
+
+class Creator extends GenericWithCreate<Employee> {
+
+    @Override
+    protected Employee create() {
+        return new Employee();
+    }
+}
+
 
 class Building {
 }
