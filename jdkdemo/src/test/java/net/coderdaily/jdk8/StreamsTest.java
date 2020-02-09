@@ -1,5 +1,6 @@
 package net.coderdaily.jdk8;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -7,6 +8,8 @@ import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * Author: sunyukun@xueqiu.com
@@ -14,6 +17,15 @@ import java.util.stream.Collectors;
  * Desc:
  */
 public class StreamsTest {
+    /**
+     * stream
+     */
+    @Test
+    public void streamTest() {
+        List<Integer> list = Stream.of(1, 2, 3, 4).collect(Collectors.toList());
+        Assert.assertEquals(Arrays.asList(1, 2, 3, 4), list);
+    }
+
     /**
      * 遍历元素
      */
@@ -55,6 +67,28 @@ public class StreamsTest {
         List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
         List<Integer> squareLists = numbers.stream().map(i -> i * i).distinct().collect(Collectors.toList());
         System.out.println(squareLists);
+    }
+
+    /**
+     * 可以使用 map 将一种类型转化为另一种类型
+     */
+    @Test
+    public void mapTest() {
+        List<String> list = Stream.of("foo", "bar")
+                .map(str -> str.toUpperCase())
+                .collect(Collectors.toList());
+        Assert.assertEquals(Arrays.asList("FOO", "BAR"), list);
+    }
+
+    /**
+     * flatMap
+     */
+    @Test
+    public void flatMapTest() {
+        List<Integer> list = Stream.of(Arrays.asList(1, 2), Arrays.asList(3, 4))
+                .flatMap(numbers -> numbers.stream())
+                .collect(Collectors.toList());
+        Assert.assertEquals(Arrays.asList(1, 2, 3, 4), list);
     }
 
     /**
@@ -106,5 +140,12 @@ public class StreamsTest {
         System.out.println("getCount:" + statistics.getCount());
         System.out.println("getSum:" + statistics.getSum());
         System.out.println("getMin:" + statistics.getMin());
+    }
+
+    @Test
+    public void extremum() {
+        IntStream intStream = IntStream.range(1, 10);
+        Assert.assertEquals(9, intStream.max().getAsInt());
+        Assert.assertEquals(1, intStream.min().getAsInt());
     }
 }
