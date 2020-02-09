@@ -3,7 +3,10 @@ package net.coderdaily.jdk8;
 import net.coderdaily.jdk8.util.PrimeUtil;
 import org.junit.Test;
 
+import javax.swing.text.DateFormatter;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Random;
 import java.util.stream.IntStream;
 
@@ -60,5 +63,22 @@ public class FunctionalTest3 {
 
         Arrays.stream(arr).limit(5).forEach(System.out::println);
         System.out.println("spend time:" + (now - begin));//spend time:4501
+    }
+
+
+    public final static ThreadLocal<DateFormatter> formatter = ThreadLocal.withInitial(() -> new DateFormatter(new SimpleDateFormat("yyyy-MM-dd")));
+
+    /**
+     * 使用 ThreadLocal 保证 SimpleDateFormat 线程安全
+     */
+    @Test
+    public void simpleDateFormatByThreadLocal() throws InterruptedException {
+        for (int i = 0; i < 100; i++) {
+            new Thread(() -> {
+                System.out.println("formatter(safe) = " + formatter.get().getFormat().format(new Date()));
+//                System.out.println("formatter(not safe) = " + new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+            }).start();
+        }
+        Thread.currentThread().join();
     }
 }
