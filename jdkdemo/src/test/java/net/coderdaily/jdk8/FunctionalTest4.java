@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.function.BinaryOperator;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
+import java.util.stream.Stream;
 
 /**
  * @author: sun.yukun@foxmail.com
@@ -51,6 +52,24 @@ public class FunctionalTest4 {
     public void customizeFunction() {
         Function<Long, Long> function = x -> x + 5;
         System.out.println("function.apply(1) = " + function.apply(1L));
+    }
+
+    /**
+     * 惰性/及时求值方法
+     */
+    @Test
+    public void streamTest() {
+        Stream<String> stream = Stream.of("foo", "bar", "hello", "world");
+        stream.filter(str -> {
+            System.out.println("str1 = " + str);//不会打印，因为 filter() 是惰性求值方法
+            return str.length() >= 3;
+        });
+
+        Stream<String> stream2 = Stream.of("foo", "bar", "hello", "world");
+        stream2.filter(str -> {
+            System.out.println("str2 = " + str);//会打印，因为 count() 是及时求值方法
+            return str.length() >= 3;
+        }).count();
     }
 }
 
