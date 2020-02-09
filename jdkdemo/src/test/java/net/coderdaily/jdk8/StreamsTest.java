@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.*;
+import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -161,5 +162,23 @@ public class StreamsTest {
                 .max(Comparator.comparing(User::getAge))//法二
                 .get();
         Assert.assertEquals(users.get(1), oldest);
+    }
+
+    @Test
+    public void reduce() {
+        int count = Stream.of(1, 2, 3, 4)
+                .reduce(0, (acc, element) -> acc + element);
+        Assert.assertEquals(10, count);
+
+        //其实就是按下面的操作的意思
+        BinaryOperator<Integer> accumulator = (acc, element) -> acc + element;
+        int count2 = accumulator.apply(
+                accumulator.apply(
+                        accumulator.apply(
+                                accumulator.apply(0, 1),
+                                2),
+                        3),
+                4);
+        Assert.assertEquals(10, count2);
     }
 }
