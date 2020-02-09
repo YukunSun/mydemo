@@ -1,12 +1,10 @@
 package net.coderdaily.jdk8;
 
+import net.coderdaily.jdk8.util.User;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.IntSummaryStatistics;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -147,5 +145,21 @@ public class StreamsTest {
         IntStream intStream = IntStream.range(1, 10);
         Assert.assertEquals(9, intStream.max().getAsInt());
         Assert.assertEquals(1, intStream.min().getAsInt());
+    }
+
+    @Test
+    public void extremum2() {
+        List<User> users = Arrays.asList(new User("foo", 22),
+                new User("bar", 25),
+                new User("sunyk", 18));
+        User youngest = users.stream()
+                .min(Comparator.comparing(user -> user.getAge()))
+                .get();
+        Assert.assertEquals(users.get(2), youngest);
+
+        User oldest = users.stream()
+                .max(Comparator.comparing(User::getAge))//法二
+                .get();
+        Assert.assertEquals(users.get(1), oldest);
     }
 }
