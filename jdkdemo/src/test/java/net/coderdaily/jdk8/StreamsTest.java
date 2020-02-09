@@ -181,4 +181,30 @@ public class StreamsTest {
                 4);
         Assert.assertEquals(10, count2);
     }
+
+    /**
+     * 通过 reduce 实现 map
+     */
+    @Test
+    public void mapUsingReduceTest() {
+        Stream<Integer> s1 = Stream.of(1, 2, 3, 4);
+        Stream<Integer> s2 = Stream.of(1, 2, 3, 4);
+        Stream<Integer> stream1 = s1.map(integer -> integer * integer);
+
+        List<Integer> integers = mapUsingReduce(s2, x -> x * x);
+        Assert.assertEquals(stream1.collect(Collectors.toList()), integers);
+    }
+
+    //todo
+    public static <I, O> List<O> mapUsingReduce(Stream<I> stream, Function<I, O> mapper) {
+        return stream.reduce(new ArrayList<>(), (acc, element) -> {
+            List<O> newAcc = new ArrayList<>(acc);
+            newAcc.add(mapper.apply(element));
+            return newAcc;
+        }, ((List<O> left, List<O> right) -> {
+            List<O> newLeft = new ArrayList<>(left);
+            newLeft.addAll(right);
+            return newLeft;
+        }));
+    }
 }
