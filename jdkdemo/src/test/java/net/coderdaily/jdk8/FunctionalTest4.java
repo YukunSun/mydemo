@@ -71,6 +71,79 @@ public class FunctionalTest4 {
             return str.length() >= 3;
         }).count();
     }
+
+    /**
+     * default
+     */
+    @Test
+    public void defaultTest() {
+        Parent parent = new ParentImpl();
+        parent.welcome();
+        Assert.assertEquals("parent", parent.getLastMessage());//子类默认使用父类的 default()
+
+        Child child = new ChildImpl();
+        child.welcome();
+        Assert.assertEquals("child", child.getLastMessage());
+    }
+
+    @Test
+    public void defaultTest2() {
+        Assert.assertEquals("interface 2", new MutiImpl().msg());
+    }
+}
+
+class MutiImpl implements Interface1, Interface2 {
+
+    public String msg() {
+        return Interface2.super.msg();
+    }
+}
+
+interface Interface1 {
+    default String msg() {
+        return "interface 1";
+    }
+}
+
+interface Interface2 {
+    default String msg() {
+        return "interface 2";
+    }
+}
+
+class ChildImpl extends ParentImpl implements Child {
+
+}
+
+interface Child extends Parent {
+    @Override
+    default void welcome() {
+        message("child");
+    }
+}
+
+class ParentImpl implements Parent {
+    private String body;
+
+    @Override
+    public void message(String body) {
+        this.body = body;
+    }
+
+    @Override
+    public String getLastMessage() {
+        return body;
+    }
+}
+
+interface Parent {
+    void message(String body);
+
+    default void welcome() {
+        message("parent");
+    }
+
+    String getLastMessage();
 }
 
 interface Function<T, R> {
