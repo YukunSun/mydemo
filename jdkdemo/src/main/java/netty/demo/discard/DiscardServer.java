@@ -1,4 +1,4 @@
-package nonblock.netty.demo;
+package netty.demo.discard;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -47,7 +47,6 @@ public class DiscardServer {
             workerGroup.shutdownGracefully();
         }
     }
-
 
     public static void main(String[] args) {
         int port = 8080;
