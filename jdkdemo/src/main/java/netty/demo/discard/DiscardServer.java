@@ -54,5 +54,9 @@ public class DiscardServer {
             port = Integer.parseInt(args[0]);
         }
         new DiscardServer(port).run();
+
+        /**
+         * usage:$telnet localhost 8080
+         */
     }
 }
