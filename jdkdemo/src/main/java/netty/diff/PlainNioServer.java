@@ -13,6 +13,8 @@ import java.util.Set;
 
 /**
  * @author sunyk
+ * <p>
+ * 普通 nio 示例
  **/
 public class PlainNioServer {
     public void serve(int port) throws IOException {
@@ -88,5 +90,6 @@ public class PlainNioServer {
     public static void main(String[] args) throws IOException {
         PlainNioServer nioServer = new PlainNioServer();
         nioServer.serve(8081);
+        //telnet localhost 8081
     }
 }
