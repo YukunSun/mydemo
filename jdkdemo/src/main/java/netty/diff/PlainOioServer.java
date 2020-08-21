@@ -39,5 +39,6 @@ public class PlainOioServer {
     public static void main(String[] args) throws IOException {
         PlainOioServer oioServer = new PlainOioServer();
         oioServer.serve(8080);
+        //telnet localhost 8080
     }
 }
