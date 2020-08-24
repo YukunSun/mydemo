@@ -32,7 +32,7 @@ public class PlainNioServer {
         //wrap msg
         while (true) {
             try {
-                //block until next event
+                //阻塞，直到状态变化
                 selector.select();
             } catch (IOException e) {
                 e.printStackTrace();
