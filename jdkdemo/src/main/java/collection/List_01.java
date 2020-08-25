@@ -10,6 +10,8 @@ import java.util.List;
  * Blog: coderdaily.net
  * <p>
  * 把年龄>3的用户删除
+ * <p>
+ * https://www.baeldung.com/java-concurrentmodificationexception
  */
 public class List_01 {
     static class User {
