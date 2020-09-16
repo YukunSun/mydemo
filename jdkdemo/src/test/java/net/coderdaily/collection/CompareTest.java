@@ -1,5 +1,6 @@
 package net.coderdaily.collection;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -13,6 +14,22 @@ import java.util.List;
  * Blog: bengle.me
  */
 public class CompareTest {
+    List<Student> students = new ArrayList<>();
+
+    @Before
+    public void setUp() throws Exception {
+        //eg
+        Student player3 = new Student(45, "Steven", 24);
+        Student player2 = new Student(67, "Roger", 22);
+        Student player1 = new Student(59, "John", 20);
+        Student player4 = new Student(59, "Foo", 31);
+        Student player5 = new Student(59, "Bar", 10);
+        students.add(player1);
+        students.add(player2);
+        students.add(player3);
+        students.add(player4);
+        students.add(player5);
+    }
 
     @Test
     public void comparableTest() {
@@ -76,22 +93,26 @@ public class CompareTest {
     public void mutiComparatorJava8Test() {
         Comparator<Student> byAge = Comparator.comparingInt(Student::getAge);
         Comparator<Student> byRanking = Comparator.comparingInt(Student::getRanking);
-        //eg
-        List<Student> footballTeam = new ArrayList<>();
-        Student player3 = new Student(45, "Steven", 24);
-        Student player2 = new Student(67, "Roger", 22);
-        Student player1 = new Student(59, "John", 20);
-        Student player4 = new Student(59, "Foo", 31);
-        Student player5 = new Student(59, "Bar", 10);
-        footballTeam.add(player1);
-        footballTeam.add(player2);
-        footballTeam.add(player3);
-        footballTeam.add(player4);
-        footballTeam.add(player5);
 
-        System.out.println("before order:" + footballTeam);
-        footballTeam.sort(byAge.thenComparing(byRanking));
-        System.out.println("after order:" + footballTeam);
+        System.out.println("before order:" + students);
+        students.sort(byAge.thenComparing(byRanking));
+        System.out.println("after order:" + students);
+    }
+
+    @Test
+    public void mutiComparatorJava8Test2() {
+        //variant:by age desc
+        Comparator<Student> byAgeAndRanking = Comparator.comparing(Student::getAge, (o1, o2) -> o2.compareTo(o1));
+        Comparator<Student> byAgeAndRanking2 = Comparator.comparing(Student::getAge, Comparator.reverseOrder());
+        //by age asc
+        Comparator<Student> byAgeAndRankingAsc = Comparator.comparing(Student::getAge, (o1, o2) -> o1.compareTo(o2));
+        Comparator<Student> byAgeAndRankingAsc2 = Comparator.comparing(Student::getAge, Comparator.naturalOrder());
+        Comparator<Student> byAgeAndRankingAsc3 = Comparator.comparing(Student::getAge);
+
+        System.out.println("before order:" + students);
+//        students.sort(byAgeAndRanking2);
+        students.sort(byAgeAndRankingAsc3);
+        System.out.println("after order:" + students);
     }
 }
 
@@ -182,7 +203,7 @@ class Student {
 
     @Override
     public String toString() {
-        return "Player{" +
+        return "Student{" +
                 "age=" + age +
                 ", name='" + name + '\'' +
                 ", ranking=" + ranking +
