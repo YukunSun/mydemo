@@ -15,6 +15,8 @@ import static org.junit.Assert.*;
 
 /**
  * @author sunyk
+ * <p>
+ * 测试入站消息
  **/
 public class FixedLengthFrameDecoderTest {
 
