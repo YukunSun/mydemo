@@ -1,4 +1,4 @@
-package net.coderdaily.io.nettydemo.time;
+package net.coderdaily.io.netty.definitiveguide2nd.chapter3;
 
 
 import io.netty.buffer.ByteBuf;
