@@ -17,7 +17,7 @@ public class TimeClientHandlerV2 extends ChannelHandlerAdapter {
     private byte[] req;
 
     public TimeClientHandlerV2() {
-        req = "query time order".getBytes();
+        req = ("query time order" + "\n").getBytes();
     }
 
     @Override
@@ -31,10 +31,16 @@ public class TimeClientHandlerV2 extends ChannelHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        ByteBuf buf = (ByteBuf) msg;
-        byte[] req = new byte[buf.readableBytes()];
-        buf.readBytes(req);
-        String body = new String(req, CharsetUtil.UTF_8);
+//        ByteBuf buf = (ByteBuf) msg;
+//        byte[] req = new byte[buf.readableBytes()];
+//        buf.readBytes(req);
+//        String body = new String(req, CharsetUtil.UTF_8);
+        String body = (String) msg;
         System.out.println("Server return:" + body + "\n");
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        cause.printStackTrace();
     }
 }
