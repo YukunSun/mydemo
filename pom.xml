@@ -7,6 +7,7 @@
     <groupId>net.coderdaily</groupId>
     <artifactId>mydemo</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <build>
         <plugins>
             <plugin>
@@ -27,6 +28,7 @@
         <module>jdkdemo</module>
         <module>guava-demo</module>
         <module>rabbitmq-demo</module>
+        <module>grpclearn</module>
     </modules>
 
 </project>
