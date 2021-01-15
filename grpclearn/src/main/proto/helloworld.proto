@@ -9,6 +9,12 @@ package helloworld;
 
 service HelloService{
   rpc SayHello(HelloRequest) returns (HelloReply);
+
+  rpc SayHelloSSRpc(HelloRequest) returns (stream HelloReply);
+
+  rpc SayHelloCSRpc(stream HelloRequest) returns (HelloReply);
+
+  rpc SayHelloBidRpc(stream HelloRequest) returns (stream HelloReply);
 }
 
 message HelloRequest{
