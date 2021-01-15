@@ -21,6 +21,8 @@ import java.util.concurrent.TimeoutException;
  * @author sunyk
  **/
 public class HelloWorldTest {
+    public static final String TARGET = "localhost:50051";
+
     @Test
     public void helloServer() throws InterruptedException, IOException {
         Server server = ServerBuilder.forPort(50051)
@@ -34,8 +36,7 @@ public class HelloWorldTest {
 
     @Test
     public void helloClient() {
-        String target = "localhost:50051";
-        ManagedChannel channel = ManagedChannelBuilder.forTarget(target)
+        ManagedChannel channel = ManagedChannelBuilder.forTarget(TARGET)
                 .usePlaintext()
                 .build();
         HelloServiceGrpc.HelloServiceBlockingStub blockingStub = HelloServiceGrpc.newBlockingStub(channel);
@@ -51,8 +52,7 @@ public class HelloWorldTest {
 
     @Test
     public void helloClient2() {
-        String target = "localhost:50051";
-        ManagedChannel channel = ManagedChannelBuilder.forTarget(target)
+        ManagedChannel channel = ManagedChannelBuilder.forTarget(TARGET)
                 .usePlaintext()
                 .build();
         HelloServiceGrpc.HelloServiceFutureStub futureStub = HelloServiceGrpc.newFutureStub(channel);

@@ -1,5 +1,6 @@
 package io.grpc.examples.helloworld;
 
+import io.grpc.stub.ServerCallStreamObserver;
 import io.grpc.stub.StreamObserver;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -21,7 +22,6 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
 
     @Override
     public void sayHelloSSRpc(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
-        System.out.println("req msg:" + request.toString());
         HelloReply reply = HelloReply.newBuilder().setMsg("response...age:" + request.getAge()).build();
 
         randomSleep();
@@ -39,9 +39,52 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
 
     @Override
     public StreamObserver<HelloRequest> sayHelloBidRpc(StreamObserver<HelloReply> responseObserver) {
+        ServerCallStreamObserver<HelloReply> serverCallStreamObserver = (ServerCallStreamObserver<HelloReply>) responseObserver;
+        //todo
+        serverCallStreamObserver.disableAutoRequest();
 
+        class OnReadyHandler implements Runnable {
+            //todo: guard against race
+            private boolean wasReady = false;
 
-        return super.sayHelloBidRpc(responseObserver);
+            @Override
+            public void run() {
+                if (serverCallStreamObserver.isReady() && !wasReady) {
+                    wasReady = true;
+                    System.out.println(">> ready...");
+                    serverCallStreamObserver.request(1);
+                }
+            }
+        }
+        final OnReadyHandler onReadyHandler = new OnReadyHandler();
+        serverCallStreamObserver.setOnReadyHandler(onReadyHandler);
+
+        return new StreamObserver<HelloRequest>() {
+            @Override
+            public void onNext(HelloRequest helloRequest) {
+                randomSleep();
+
+                HelloReply reply = HelloReply.newBuilder().setMsg("response...").build();
+                serverCallStreamObserver.onNext(reply);
+                if (serverCallStreamObserver.isReady()) {
+                    serverCallStreamObserver.request(1);
+                } else {
+                    onReadyHandler.wasReady = false;
+                }
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                throwable.printStackTrace();
+                responseObserver.onCompleted();
+            }
+
+            @Override
+            public void onCompleted() {
+                System.out.println("completed...");
+                responseObserver.onCompleted();
+            }
+        };
     }
 
     void randomSleep() {
