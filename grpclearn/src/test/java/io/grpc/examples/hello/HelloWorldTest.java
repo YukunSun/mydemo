@@ -13,6 +13,7 @@ import io.grpc.examples.helloworld.HelloServiceImpl;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -51,7 +52,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void helloClient2() {
+    public void helloClientAsync() {
         ManagedChannel channel = ManagedChannelBuilder.forTarget(TARGET)
                 .usePlaintext()
                 .build();
@@ -76,7 +77,19 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void helloStreamClient() {
+    public void helloStreamClientSSRpc() {
+        ManagedChannel channel = ManagedChannelBuilder.forTarget(TARGET)
+                .usePlaintext()
+                .build();
+        HelloServiceGrpc.HelloServiceBlockingStub blockingStub = HelloServiceGrpc.newBlockingStub(channel);
 
+        for (int i = 0; i < 3; i++) {
+            HelloRequest request = HelloRequest.newBuilder().setAge(i).setName("foo").setSex(false).addAllFav(Lists.newArrayList("Math", "English")).build();
+            Iterator<HelloReply> response = blockingStub.sayHelloSSRpc(request);
+            response.forEachRemaining(res -> {
+                System.out.println("response:" + res);
+            });
+        }
+        channel.shutdown();
     }
 }

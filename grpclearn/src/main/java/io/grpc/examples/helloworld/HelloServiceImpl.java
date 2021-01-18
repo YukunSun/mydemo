@@ -22,11 +22,13 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
 
     @Override
     public void sayHelloSSRpc(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
-        HelloReply reply = HelloReply.newBuilder().setMsg("response...age:" + request.getAge()).build();
+        for (int i = 0; i < 5; i++) {
+            HelloReply reply = HelloReply.newBuilder().setMsg("response...age:" + request.getAge()).build();
 
-        randomSleep();
+            randomSleepShort();
 
-        responseObserver.onNext(reply);
+            responseObserver.onNext(reply);
+        }
         responseObserver.onCompleted();
     }
 
@@ -90,6 +92,14 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
     void randomSleep() {
         try {
             Thread.sleep(1000 * ThreadLocalRandom.current().nextInt(10));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    void randomSleepShort() {
+        try {
+            Thread.sleep(1000 * ThreadLocalRandom.current().nextInt(3));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
