@@ -40,7 +40,7 @@ public class FlowControlTest {
 
                 clientCallStreamObserver.disableAutoRequestWithInitial(1);
                 clientCallStreamObserver.setOnReadyHandler(() -> {
-                    Iterator<Integer> iterator = IntStream.range(0, 100).iterator();
+                    Iterator<Integer> iterator = IntStream.range(0, 10).iterator();
                     while (clientCallStreamObserver.isReady()) {
                         if (iterator.hasNext()) {
                             HelloRequest request = HelloRequest.newBuilder()
@@ -67,14 +67,15 @@ public class FlowControlTest {
 
             @Override
             public void onCompleted() {
-                System.out.println(">>All done...");
+                System.out.println(">> client all done...");
                 done.countDown();
             }
         };
 
+        stub.sayHelloBidRpc(responseObserver);
+
         done.await();
 
-        stub.sayHelloBidRpc(responseObserver);
         channel.shutdown();
         channel.awaitTermination(10, TimeUnit.SECONDS);
     }

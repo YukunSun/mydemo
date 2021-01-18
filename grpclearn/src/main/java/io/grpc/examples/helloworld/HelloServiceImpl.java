@@ -51,7 +51,7 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
             public void run() {
                 if (serverCallStreamObserver.isReady() && !wasReady) {
                     wasReady = true;
-                    System.out.println(">> ready...");
+                    System.out.println(">> server ready...");
                     serverCallStreamObserver.request(1);
                 }
             }
@@ -64,7 +64,7 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
             public void onNext(HelloRequest helloRequest) {
                 randomSleep();
 
-                HelloReply reply = HelloReply.newBuilder().setMsg("response...").build();
+                HelloReply reply = HelloReply.newBuilder().setMsg("response..." + helloRequest.getAge()).build();
                 serverCallStreamObserver.onNext(reply);
                 if (serverCallStreamObserver.isReady()) {
                     serverCallStreamObserver.request(1);
@@ -81,7 +81,7 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
 
             @Override
             public void onCompleted() {
-                System.out.println("completed...");
+                System.out.println("Server completed...");
                 responseObserver.onCompleted();
             }
         };
