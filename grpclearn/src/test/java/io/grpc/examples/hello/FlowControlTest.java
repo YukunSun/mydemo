@@ -72,7 +72,7 @@ public class FlowControlTest {
             }
         };
 
-        stub.sayHelloBidRpc(responseObserver);
+        stub.manualFlowControl(responseObserver);
 
         done.await();
 

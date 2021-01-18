@@ -15,6 +15,8 @@ service HelloService{
   rpc SayHelloCSRpc(stream HelloRequest) returns (HelloReply);
 
   rpc SayHelloBidRpc(stream HelloRequest) returns (stream HelloReply);
+
+  rpc ManualFlowControl(stream HelloRequest) returns (stream HelloReply);
 }
 
 message HelloRequest{

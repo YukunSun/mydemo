@@ -61,6 +61,11 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
 
     @Override
     public StreamObserver<HelloRequest> sayHelloBidRpc(StreamObserver<HelloReply> responseObserver) {
+        return null;
+    }
+
+    @Override
+    public StreamObserver<HelloRequest> manualFlowControl(StreamObserver<HelloReply> responseObserver) {
         ServerCallStreamObserver<HelloReply> serverCallStreamObserver = (ServerCallStreamObserver<HelloReply>) responseObserver;
         //todo
         serverCallStreamObserver.disableAutoRequest();
