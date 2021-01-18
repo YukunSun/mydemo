@@ -34,9 +34,29 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
 
     @Override
     public StreamObserver<HelloRequest> sayHelloCSRpc(StreamObserver<HelloReply> responseObserver) {
+        randomSleep();
 
+        HelloReply reply = HelloReply.newBuilder().setMsg("<< response from server...").build();
 
-        return super.sayHelloCSRpc(responseObserver);
+        return new StreamObserver<HelloRequest>() {
+            @Override
+            public void onNext(HelloRequest helloRequest) {
+                System.out.println(helloRequest);
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                throwable.printStackTrace();
+            }
+
+            @Override
+            public void onCompleted() {
+                System.out.println("<< server done...");
+
+                responseObserver.onNext(reply);
+                responseObserver.onCompleted();
+            }
+        };
     }
 
     @Override

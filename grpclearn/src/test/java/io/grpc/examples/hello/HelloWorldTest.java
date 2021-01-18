@@ -2,18 +2,17 @@ package io.grpc.examples.hello;
 
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.ListenableFuture;
-import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
-import io.grpc.Server;
-import io.grpc.ServerBuilder;
+import io.grpc.*;
 import io.grpc.examples.helloworld.HelloReply;
 import io.grpc.examples.helloworld.HelloRequest;
 import io.grpc.examples.helloworld.HelloServiceGrpc;
 import io.grpc.examples.helloworld.HelloServiceImpl;
+import io.grpc.stub.StreamObserver;
 import org.junit.Test;
 
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -90,6 +89,45 @@ public class HelloWorldTest {
                 System.out.println("response:" + res);
             });
         }
+        channel.shutdown();
+    }
+
+    @Test
+    public void helloStreamClientCSRpc() throws InterruptedException {
+        ManagedChannel channel = ManagedChannelBuilder.forTarget(TARGET)
+                .usePlaintext()
+                .build();
+        HelloServiceGrpc.HelloServiceStub asyncStub = HelloServiceGrpc.newStub(channel);
+
+        final CountDownLatch finishLatch = new CountDownLatch(1);
+        StreamObserver<HelloReply> replyStreamObserver = new StreamObserver<HelloReply>() {
+            @Override
+            public void onNext(HelloReply helloReply) {
+                System.out.println(">> server response:" + helloReply);
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                Status status = Status.fromThrowable(throwable);
+                System.out.println(">> status" + status);
+                finishLatch.countDown();
+            }
+
+            @Override
+            public void onCompleted() {
+                System.out.println(">> client finished");
+                finishLatch.countDown();
+            }
+        };
+
+        StreamObserver<HelloRequest> requestObserver = asyncStub.sayHelloCSRpc(replyStreamObserver);
+        for (int i = 0; i < 10; i++) {
+            HelloRequest request = HelloRequest.newBuilder().setAge(i).setName("foo").setSex(false).addAllFav(Lists.newArrayList("Math", "English")).build();
+            requestObserver.onNext(request);
+        }
+        requestObserver.onCompleted();
+
+        finishLatch.await();
         channel.shutdown();
     }
 }
