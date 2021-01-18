@@ -12,16 +12,23 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * @author sunyk
  **/
 public class HelloWorldTest {
     public static final String TARGET = "localhost:50051";
+    ManagedChannel channel = ManagedChannelBuilder.forTarget(TARGET)
+            .usePlaintext()
+            .build();
+    HelloServiceGrpc.HelloServiceStub asyncStub = HelloServiceGrpc.newStub(channel);
 
     @Test
     public void helloServer() throws InterruptedException, IOException {
@@ -129,5 +136,39 @@ public class HelloWorldTest {
 
         finishLatch.await();
         channel.shutdown();
+    }
+
+    @Test
+    public void helloStreamClientBidirectionalRpc() throws InterruptedException {
+        final CountDownLatch finishLatch = new CountDownLatch(1);
+        StreamObserver<HelloRequest> requestObserver = asyncStub.sayHelloBidRpc(new StreamObserver<HelloReply>() {
+            @Override
+            public void onNext(HelloReply helloReply) {
+                System.out.println(helloReply);
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                throwable.printStackTrace();
+                finishLatch.countDown();
+            }
+
+            @Override
+            public void onCompleted() {
+                System.out.println("client finished...");
+                finishLatch.countDown();
+            }
+        });
+
+        List<HelloRequest> requests = IntStream.range(1, 10).mapToObj(i -> HelloRequest.newBuilder().setAge(i).build()).collect(Collectors.toList());
+        try {
+            requests.forEach(v -> requestObserver.onNext(v));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        requestObserver.onCompleted();
+
+        finishLatch.await(100, TimeUnit.SECONDS);
     }
 }

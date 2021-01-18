@@ -61,7 +61,24 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
 
     @Override
     public StreamObserver<HelloRequest> sayHelloBidRpc(StreamObserver<HelloReply> responseObserver) {
-        return null;
+
+        return new StreamObserver<HelloRequest>() {
+            @Override
+            public void onNext(HelloRequest helloRequest) {
+                System.out.println("request:" + helloRequest);
+                responseObserver.onNext(HelloReply.newBuilder().setMsg(helloRequest.getAge() + "").build());
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                throwable.printStackTrace();
+            }
+
+            @Override
+            public void onCompleted() {
+                responseObserver.onCompleted();
+            }
+        };
     }
 
     @Override
