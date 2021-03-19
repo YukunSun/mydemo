@@ -9,6 +9,10 @@ package net.coderdaily.spring.cycle2;
 public class ServiceA {
     private ServiceB serviceB;
 
+    public ServiceA() {
+        System.out.println("constructor of ServiceA");
+    }
+
     public void setServiceB(ServiceB serviceB) {
         this.serviceB = serviceB;
         System.out.println("A set serviceB by setter");
