@@ -1,4 +1,4 @@
-package net.coderdaily.spring;
+package net.coderdaily.spring.cycle1;
 
 import org.springframework.stereotype.Component;
 
