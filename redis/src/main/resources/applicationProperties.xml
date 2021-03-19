@@ -3,10 +3,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--    演示循环引用-->
     <bean id="a" class="net.coderdaily.spring.cycle2.ServiceA" scope="singleton">
         <property name="serviceB" ref="b"></property>
     </bean>
     <bean id="b" class="net.coderdaily.spring.cycle2.ServiceB" scope="singleton">
         <property name="serviceA" ref="a"></property>
     </bean>
+
+    <!--演示bean的生命周期-->
+    <bean id="user" class="net.coderdaily.spring.bean.User" init-method="initUser" destroy-method="destroyUser">
+        <property name="age" value="13"></property>
+    </bean>
+    <bean id="myBeanPostProcessor" class="net.coderdaily.spring.bean.MyAllBeanPostProcessor"></bean>
 </beans>
