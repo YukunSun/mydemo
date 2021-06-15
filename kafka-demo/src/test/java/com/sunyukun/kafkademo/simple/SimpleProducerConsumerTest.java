@@ -1,5 +1,6 @@
 package com.sunyukun.kafkademo.simple;
 
+import com.sunyukun.kafkademo.KafkaDemoApplicationTests;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
@@ -13,9 +14,11 @@ import java.util.Arrays;
 import java.util.Properties;
 
 /**
- * https://www.w3cschool.cn/apache_kafka/apache_kafka_simple_producer_example.html
+ * https://www.w3cschool.cn/apache_kafka/apache_kafka_simple_producer_example.
+ * <p>
+ * 继承KafkaDemoApplicationTests，纯粹为了使用logback的配置，只打印info级别的信息
  */
-public class SimpleProducerConsumerTest {
+public class SimpleProducerConsumerTest extends KafkaDemoApplicationTests {
     String topicName = "topic1";
 
     @Test
@@ -68,6 +71,30 @@ public class SimpleProducerConsumerTest {
             for (ConsumerRecord<String, String> record : records) {
                 System.out.printf("offset = %d, key = %s, value = %s\n", record.offset(), record.key(), record.value());
             }
+        }
+    }
+
+    String group = "test";
+
+    @Test
+    void consumerGroupTest() {
+        Properties props = new Properties();
+        props.put("bootstrap.servers", "localhost:9092");
+        props.put("group.id", group);
+        props.put("enable.auto.commit", "true");
+        props.put("auto.commit.interval.ms", "1000");
+        props.put("session.timeout.ms", "30000");
+        props.put("key.deserializer",
+                "org.apache.kafka.common.serialization.StringDeserializer");
+        props.put("value.deserializer",
+                "org.apache.kafka.common.serialization.StringDeserializer");
+        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
+
+        consumer.subscribe(Arrays.asList(topicName));
+        while (true) {
+            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
+            for (ConsumerRecord<String, String> record : records)
+                System.out.printf("offset = %d, key = %s, value = %s\n", record.offset(), record.key(), record.value());
         }
     }
 }
