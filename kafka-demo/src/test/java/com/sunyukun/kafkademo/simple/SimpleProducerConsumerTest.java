@@ -15,7 +15,7 @@ import java.util.Properties;
 /**
  * https://www.w3cschool.cn/apache_kafka/apache_kafka_simple_producer_example.html
  */
-public class ProducerConsumerTest {
+public class SimpleProducerConsumerTest {
     String topicName = "topic1";
 
     @Test
@@ -39,15 +39,9 @@ public class ProducerConsumerTest {
 
         //The buffer.memory controls the total amount of memory available to the producer for buffering.
         props.put("buffer.memory", 33554432);
-
-        props.put("key.serializer",
-                "org.apache.kafka.common.serialization.StringSerializer");
-
-        props.put("value.serializer",
-                "org.apache.kafka.common.serialization.StringSerializer");
-
-        Producer<String, String> producer = new KafkaProducer
-                <String, String>(props);
+        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        Producer<String, String> producer = new KafkaProducer<>(props);
 
         for (int i = 0; i < 100; i++) {
             producer.send(new ProducerRecord<>(topicName, Integer.toString(i), Integer.toString(i)));
@@ -70,7 +64,6 @@ public class ProducerConsumerTest {
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
         consumer.subscribe(Arrays.asList(topicName));
         while (true) {
-            System.out.println("poll ...");
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofSeconds(100));
             for (ConsumerRecord<String, String> record : records) {
                 System.out.printf("offset = %d, key = %s, value = %s\n", record.offset(), record.key(), record.value());
