@@ -21,4 +21,6 @@
     <!-- 和本地bean一样实现服务 -->
     <bean id="demoService" class="net.coderdaily.dubbo.service.impl.DemoServiceImpl"/>
 
+    <dubbo:service interface="com.sunyukun.service.UserService" ref="userService"/>
+    <bean id="userService" class="net.coderdaily.dubbo.service.impl.UserServiceImpl"/>
 </beans>

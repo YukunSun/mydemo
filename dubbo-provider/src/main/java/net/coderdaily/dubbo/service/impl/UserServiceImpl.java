@@ -3,6 +3,7 @@ package net.coderdaily.dubbo.service.impl;
 
 import com.sunyukun.bean.UserAddress;
 import com.sunyukun.service.UserService;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
  * Time: 2021/7/3 23:04
  * Blog: sunyukun.com
  */
+@Service
 public class UserServiceImpl implements UserService {
     @Override
     public List<UserAddress> getUserAddressList(String userId) {

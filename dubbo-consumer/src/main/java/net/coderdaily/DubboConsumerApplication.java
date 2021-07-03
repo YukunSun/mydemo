@@ -3,6 +3,7 @@ package net.coderdaily;
 import com.sunyukun.bean.UserAddress;
 import com.sunyukun.service.IDemoService;
 import com.sunyukun.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportResource;
@@ -19,8 +20,8 @@ public class DubboConsumerApplication {
 
     @Resource
     private IDemoService demoService;
-//    @Resource
-//    private UserService userService;
+    @Autowired
+    private UserService userService;
 
     public static void main(String[] args) {
         SpringApplication.run(DubboConsumerApplication.class, args);
@@ -32,9 +33,9 @@ public class DubboConsumerApplication {
         return reslt;
     }
 
-//    @RequestMapping("address")
-//    public List<UserAddress> address() {
-//        List<UserAddress> reslt = userService.getUserAddressList("1");
-//        return reslt;
-//    }
+    @RequestMapping("address")
+    public List<UserAddress> address() {
+        List<UserAddress> reslt = userService.getUserAddressList("1");
+        return reslt;
+    }
 }
