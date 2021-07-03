@@ -1,4 +1,6 @@
-package net.coderdaily.dubbo.service;
+package net.coderdaily.dubbo.service.impl;
+
+import com.sunyukun.service.IDemoService;
 
 public class DemoServiceImpl implements IDemoService {
     @Override

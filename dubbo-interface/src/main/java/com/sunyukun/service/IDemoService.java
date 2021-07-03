@@ -1,4 +1,4 @@
-package net.coderdaily.dubbo.service;
+package com.sunyukun.service;
 
 public interface IDemoService {
     String sayHello(String name);

@@ -1,6 +1,6 @@
 package net.coderdaily;
 
-import net.coderdaily.dubbo.service.IDemoService;
+import com.sunyukun.service.IDemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
