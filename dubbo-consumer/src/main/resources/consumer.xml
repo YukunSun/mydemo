@@ -19,5 +19,5 @@
     <dubbo:reference id="demoService" interface="com.sunyukun.service.IDemoService"/>
 
     <!--    -->
-    <dubbo:reference interface="com.sunyukun.service.UserService"/>
+<!--    <dubbo:reference interface="com.sunyukun.service.UserService"/>-->
 </beans>

@@ -1,11 +1,14 @@
 package com.sunyukun.bean;
 
+import java.io.Serializable;
+
 /**
  * @author: sun.yukun@foxmail.com
  * Time: 2021/7/3 22:59
  * Blog: sunyukun.com
  */
-public class UserAddress {
+public class UserAddress implements Serializable {
+
     private Integer userId;
     private String province;
     private String county;

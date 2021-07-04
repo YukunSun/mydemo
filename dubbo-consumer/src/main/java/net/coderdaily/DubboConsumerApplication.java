@@ -3,24 +3,23 @@ package net.coderdaily;
 import com.sunyukun.bean.UserAddress;
 import com.sunyukun.service.IDemoService;
 import com.sunyukun.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @SpringBootApplication
-@ImportResource("consumer.xml")
+//@ImportResource("consumer.xml")
 @RestController
 public class DubboConsumerApplication {
 
-    @Resource
+    @DubboReference(version = "1.0.0", url = "dubbo://127.0.0.1:20880")
     private IDemoService demoService;
-    @Autowired
+
+    @DubboReference(version = "1.0.0", url = "dubbo://127.0.0.1:20880",timeout = 10000)
     private UserService userService;
 
     public static void main(String[] args) {
