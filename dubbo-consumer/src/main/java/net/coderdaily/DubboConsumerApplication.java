@@ -16,10 +16,10 @@ import java.util.List;
 @RestController
 public class DubboConsumerApplication {
 
-    @DubboReference(version = "1.0.0", url = "dubbo://127.0.0.1:20880")
+    @DubboReference(version = "1.0.0")
     private IDemoService demoService;
 
-    @DubboReference(version = "1.0.0", url = "dubbo://127.0.0.1:20880",timeout = 10000)
+    @DubboReference(version = "1.0.0", timeout = 10000)
     private UserService userService;
 
     public static void main(String[] args) {
