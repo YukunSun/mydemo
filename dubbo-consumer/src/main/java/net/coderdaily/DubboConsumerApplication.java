@@ -16,7 +16,10 @@ import java.util.List;
 @RestController
 public class DubboConsumerApplication {
 
-    @DubboReference(version = "1.0.0")
+    /**
+     * 直连模式，怎么非常方便地判断直连？
+     */
+    @DubboReference(version = "1.0.0", url = "dubbo://127.0.0.1:20880")
     private IDemoService demoService;
 
     @DubboReference(version = "2.0.0", timeout = 2000, retries = 3, check = false, stub = "net.coderdaily.stub.UserServiceStub")
