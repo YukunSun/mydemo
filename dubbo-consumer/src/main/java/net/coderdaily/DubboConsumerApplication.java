@@ -19,7 +19,7 @@ public class DubboConsumerApplication {
     @DubboReference(version = "1.0.0")
     private IDemoService demoService;
 
-    @DubboReference(version = "1.0.0", timeout = 10000)
+    @DubboReference(version = "1.0.0", timeout = 2000, retries = 3, check = false)
     private UserService userService;
 
     public static void main(String[] args) {

@@ -17,6 +17,7 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Override
     public List<UserAddress> getUserAddressList(String userId) {
+        System.out.println("get address.....");
         List<UserAddress> list = new ArrayList<>();
         list.add(new UserAddress(1, "ShangHai", "s1"));
         list.add(new UserAddress(2, "Beijing", "b1"));
