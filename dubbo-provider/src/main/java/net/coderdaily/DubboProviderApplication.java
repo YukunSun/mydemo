@@ -2,11 +2,13 @@ package net.coderdaily;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 //@ImportResource("provider.xml")
 @RestController
+@EnableHystrix
 public class DubboProviderApplication {
 //    @Autowired
 //    private IDemoService demoService;

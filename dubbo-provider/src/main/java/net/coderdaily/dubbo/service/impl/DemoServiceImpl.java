@@ -7,6 +7,6 @@ import org.apache.dubbo.config.annotation.DubboService;
 public class DemoServiceImpl implements IDemoService {
     @Override
     public String sayHello(String name) {
-        return "hello :" + name;
+        return "hello :" + name + "env:" + System.getenv();
     }
 }
