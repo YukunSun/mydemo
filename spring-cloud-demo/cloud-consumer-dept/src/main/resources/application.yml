@@ -4,6 +4,8 @@ server:
     context-path: /consumer
 
 eureka:
+  instance:
+    appname: consumer-dept-8002
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
