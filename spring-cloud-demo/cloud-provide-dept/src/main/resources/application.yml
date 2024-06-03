@@ -1,0 +1,11 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /provider
+
+eureka:
+  instance:
+    appname: provider-dept-8001
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
