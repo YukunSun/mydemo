@@ -37,4 +37,20 @@ public class ParallelTest {
         int secondThrow = random.nextInt(1, 7);
         return firstThrow + secondThrow;
     }
+
+    @Test
+    public void parallelTest() {
+        int[] arr = {3, 1, 2, 5, 2, 4};
+        //排序
+        Arrays.parallelSort(arr);
+        Arrays.stream(arr).forEach(System.out::println);
+
+//        //在原有基础上改写
+//        Arrays.parallelSetAll(arr, x -> 1);
+//        Arrays.stream(arr).forEach(System.out::println);
+
+        //宽泛求和：类似 reduce
+        Arrays.parallelPrefix(arr, Integer::sum);
+        Arrays.stream(arr).forEach(System.out::println);
+    }
 }

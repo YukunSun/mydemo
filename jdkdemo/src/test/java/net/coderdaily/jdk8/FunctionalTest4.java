@@ -3,6 +3,7 @@ package net.coderdaily.jdk8;
 import org.junit.Assert;
 import org.junit.Test;
 
+import javax.swing.*;
 import java.util.function.BinaryOperator;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
@@ -12,6 +13,8 @@ import java.util.stream.Stream;
  * @author: sun.yukun@foxmail.com
  * Time: 2020/2/7 22:47
  * Blog: coderdaily.net
+ * <p>
+ * https://github.com/RichardWarburton/java-8-lambdas-exercises/blob/master/src/test/java/com/insightfullogic/java8/answers/chapter2/Question2Test.java
  */
 public class FunctionalTest4 {
     @Test
@@ -33,10 +36,37 @@ public class FunctionalTest4 {
     @Test
     public void binaryOperatorTest() {
         BinaryOperator<Integer> add = (x, y) -> x + y;
+        BinaryOperator<Integer> add3 = (Integer x, Integer y) -> x + y;
+        BinaryOperator<Integer> add2 = Integer::sum;
         System.out.println("add = " + add.apply(1, 2));
 
         BinaryOperator<Integer> muti = (x, y) -> x * y;
         System.out.println("muti.apply(2,3) = " + muti.apply(2, 3));
+    }
+
+    @Test
+    public void name() {
+        Runnable hello = () -> System.out.println("hello");
+        new Thread(hello).start();
+
+        JButton button = new JButton();
+        button.addActionListener(e -> {
+            System.out.println("e.getActionCommand() = " + e.getActionCommand());
+        });
+    }
+
+    @FunctionalInterface
+    interface IntPred {
+        boolean test(Integer value);
+//        boolean test(Predicate<Integer> value);
+//        boolean test(IntPred value);
+    }
+
+    @Test
+    public void name2() {
+        IntPred p = (x) -> x > 5;
+        System.out.println("p = " + p.test(1));
+        System.out.println("p = " + p.test(10));
     }
 
     @Test
